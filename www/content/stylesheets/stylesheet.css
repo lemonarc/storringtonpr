@@ -191,3 +191,8 @@ nav {
   color: #181d21; }
   .testimonials .testimonial.crown_and_garter cite {
     color: #6d6965; }
+.testimonials .testimonial.desroches_island cite {
+  color: #9b8ea6; }
+.testimonials .testimonial.desroches_island img {
+  display: block;
+  width: 100%; }

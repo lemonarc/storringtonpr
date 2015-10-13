@@ -111,11 +111,23 @@
       color: lighten(desaturate($brand-secondary, 40%), 30%);
     }
   }
+
   .testimonial.crown_and_garter {
     background-color: #95d4cb;
     color: #181d21;
     cite {
       color: lighten(desaturate(#181d21, 20%), 30%);
+    }
+  }
+
+  .testimonial.desroches_island {
+    cite {
+      color: lighten(desaturate($brand-secondary, 40%), 30%);
+    }
+
+    img {
+      display: block;
+      width: 100%;
     }
   }
 }
