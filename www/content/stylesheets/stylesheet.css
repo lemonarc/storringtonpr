@@ -74,6 +74,13 @@ nav {
       list-style: none;
       margin: 0 0.6rem; }
 
+footer {
+  background-color: #522576;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  font-size: 1.5rem; }
+
 .hero_splash {
   width: 100vw;
   height: 100vh; }
