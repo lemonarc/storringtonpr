@@ -142,3 +142,52 @@ nav {
     color: white; }
     .testimonial_separator .testimonial_blurb h2, .testimonial_separator .testimonial_blurb h3 {
       margin: 0.5rem; }
+
+.testimonials .testimonial_inner {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 0;
+  position: relative; }
+  .testimonials .testimonial_inner::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .testimonials .testimonial_inner .testimonial_logo {
+    margin-left: 59.7086300988%;
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 40.2913699012%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center; }
+    .testimonials .testimonial_inner .testimonial_logo:last-child {
+      margin-right: 0; }
+  .testimonials .testimonial_inner .testimonial_quote {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 57.3509785009%; }
+    .testimonials .testimonial_inner .testimonial_quote:last-child {
+      margin-right: 0; }
+    .testimonials .testimonial_inner .testimonial_quote blockquote {
+      font-size: 1.3rem; }
+.testimonials .testimonial:nth-child(odd) {
+  text-align: right; }
+  .testimonials .testimonial:nth-child(odd) .testimonial_logo {
+    margin-left: 0%; }
+  .testimonials .testimonial:nth-child(odd) .testimonial_quote {
+    margin-left: 42.6490214991%; }
+.testimonials .testimonial.evian_resort cite {
+  color: #9b8ea6; }
+.testimonials .testimonial.crown_and_garter {
+  background-color: #95d4cb;
+  color: #181d21; }
+  .testimonials .testimonial.crown_and_garter cite {
+    color: #6d6965; }
