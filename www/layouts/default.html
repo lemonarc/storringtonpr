@@ -5,26 +5,26 @@
     <title>Storrington PR - <%= @item[:title] %></title>
     <link rel="stylesheet" href="stylesheets/stylesheet.css">
 
+    <script src="//use.edgefonts.net/amethysta;brawler;convergence;crete-round.js"></script>
+
     <!-- you don't need to keep this, but it's cool for stats! -->
     <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
   </head>
   <body>
-    <div id="main">
-      <%= yield %>
-    </div>
-    <div id="sidebar">
-      <h2>Documentation</h2>
-      <ul>
-        <li><a href="http://v4.nanoc.ws/about/">About</a></li>
-        <li><a href="http://v4.nanoc.ws/doc/">Documentation</a></li>
-        <li><a href="http://v4.nanoc.ws/doc/tutorial/">Tutorial</a></li>
-      </ul>
-      <h2>Community</h2>
-      <ul>
-        <li><a href="http://groups.google.com/group/nanoc/">Discussion group</a></li>
-        <li><a href="irc://chat.freenode.net/#nanoc">IRC channel</a></li>
-        <li><a href="http://v4.nanoc.ws/contributing/">Contributing</a></li>
-      </ul>
-    </div>
+    <nav>
+      <div class="navigation_inner">
+        <div class="storrington_logo">
+          <a href="/"><img src="/images/storringtonpr_logo.png"/></a>
+        </div>
+        <ul class="navigation_links">
+          <li>About</li>
+          <li>Expertise</li>
+          <li>Clients</li>
+          <li>Testimonials</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </nav>
+    <%= yield %>
   </body>
 </html>

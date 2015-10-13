@@ -1,0 +1,72 @@
+.hero_splash {
+  width: 100vw;
+  height: 100vh;
+
+  .hero_segment {
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    float: left;
+    background-position: 50% 50%;
+  }
+  .top_left {
+    background-image: url(/images/residence_on_the_rocks/pool_deck.jpg);
+  }
+  .top_right {
+    background-image: url(/images/restaurant/group_tables.jpg);
+  }
+  .bottom_left {
+    background-image: url(/images/the_singular/rooftop_bar.jpg);
+  }
+  .bottom_right {
+    background-image: url(/images/crown_and_garter/room_1_straight.jpg);
+  }
+}
+
+.home_main_text {
+  position: relative;
+  @include outer-container($max-width * 0.85);
+  font-size: 1.2rem;
+
+  $header-text-width: 5;
+
+  .header_text {
+
+    @include span-columns($header-text-width);
+    @include pad(0 30px);
+
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+
+    h3 {
+      font-weight: normal;
+      font-size: 1.4rem;
+    }
+  }
+
+  .blurb_text {
+    margin: 2rem 0;
+    text-align: justify;
+    @include shift($header-text-width);
+    @include span-columns($grid-columns - $header-text-width);
+    @include omega();
+    @include pad(0 20px);
+  }
+}
+
+.testimonial_separator {
+  background-color: $brand-primary;
+  text-align: center;
+  @include pad(20px 0);
+
+  font-size: 1.5em;
+
+  .testimonial_blurb {
+    color: white;
+
+    h2, h3 {
+      margin: 0.5rem;
+    }
+  }
+}

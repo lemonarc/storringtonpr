@@ -1,0 +1,43 @@
+nav {
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-backdrop-filter: blur(5px);
+
+  border-bottom: 1px solid #ddd;
+  width: 100vw;
+  padding: 1rem;
+
+  .navigation_inner {
+    @include outer-container();
+    height: 70px;
+  }
+
+  .storrington_logo {
+    @include span-columns(4);
+
+    img {
+      width: 100%;
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  .navigation_links {
+    @include shift(1);
+    @include span-columns(7);
+    @include omega();
+
+    font-size: 1.4rem;
+    text-align: right;
+    text-transform: uppercase;
+
+    li {
+      line-height: 100%;
+      display: inline-block;
+      list-style: none;
+      margin: 0 0.6rem;
+    }
+  }
+
+}

@@ -1,2 +1,17 @@
+/* IMPORT FONTS */
+@import url(https://fonts.googleapis.com/css?family=Khula:300);
+@import url(https://fonts.googleapis.com/css?family=Raleway:200);
+
+/* IMPORT BOURBON */
 @import "bourbon/bourbon";
+
+/* NEAT VARIABLES */
+$max-width: rem(1200) !global;
+
+/* IMPORT NEAT */
 @import "neat/neat";
+
+/* IMPORT STORRINGTON STYLESHEETS */
+@import "storrington/global";
+@import "storrington/navigation";
+@import "storrington/home";
