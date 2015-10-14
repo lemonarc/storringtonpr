@@ -5,11 +5,12 @@
 /* IMPORT BOURBON */
 @import "bourbon/bourbon";
 
-/* NEAT VARIABLES */
-$max-width: rem(1200) !global;
-
 /* IMPORT NEAT */
 @import "neat/neat";
+
+/* NEAT VARIABLES */
+$max-width: rem(1200) !global;
+$default-feature: max-width !global;
 
 /* IMPORT STORRINGTON STYLESHEETS */
 @import "storrington/global";

@@ -15,35 +15,45 @@ nav {
 
   padding: 1rem;
 
+  $navigation_inner_width: 70px;
+  
   .navigation_inner {
     @include outer-container();
-    height: 70px;
+    height: $navigation_inner_width;
   }
 
   .storrington_logo {
     @include span-columns(4);
+    line-height: $navigation_inner_width;
 
     img {
       width: 100%;
       position: relative;
-      top: 5px;
+      top: 3px;
+      vertical-align: middle;
     }
   }
 
   .navigation_links {
-    @include shift(1);
-    @include span-columns(7);
-    @include omega();
+    @include span-columns(8);
 
+    line-height: $navigation_inner_width;
     font-size: 1.4rem;
+    @include media(1024px) {
+      font-size: 1.1rem;
+    }
     text-align: right;
     text-transform: uppercase;
+    padding: 0;
+    margin: 0;
 
     li {
-      line-height: 100%;
       display: inline-block;
       list-style: none;
       margin: 0 0.6rem;
+      vertical-align: middle;
+      position: relative;
+      top: 5px;
     }
   }
 

@@ -2,7 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:200);
 /* IMPORT FONTS */
 /* IMPORT BOURBON */
-/* NEAT VARIABLES */
 /* IMPORT NEAT */
 html {
   box-sizing: border-box; }
@@ -10,6 +9,7 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+/* NEAT VARIABLES */
 /* IMPORT STORRINGTON STYLESHEETS */
 html, body {
   margin: 0;
@@ -55,30 +55,38 @@ nav {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
-    width: 31.7615656014%; }
+    width: 31.7615656014%;
+    line-height: 70px; }
     nav .storrington_logo:last-child {
       margin-right: 0; }
     nav .storrington_logo img {
       width: 100%;
       position: relative;
-      top: 5px; }
+      top: 3px;
+      vertical-align: middle; }
   nav .navigation_links {
-    margin-left: 8.5298042998%;
     float: left;
     display: block;
     margin-right: 2.3576515979%;
-    width: 57.3509785009%;
-    margin-right: 0;
+    width: 65.8807828007%;
+    line-height: 70px;
     font-size: 1.4rem;
     text-align: right;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0; }
     nav .navigation_links:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 1024px) {
+      nav .navigation_links {
+        font-size: 1.1rem; } }
     nav .navigation_links li {
-      line-height: 100%;
       display: inline-block;
       list-style: none;
-      margin: 0 0.6rem; }
+      margin: 0 0.6rem;
+      vertical-align: middle;
+      position: relative;
+      top: 5px; }
 
 footer {
   background-color: #522576;
