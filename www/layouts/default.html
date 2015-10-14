@@ -4,7 +4,21 @@
     <meta charset="utf-8">
     <title>Storrington PR - <%= @item[:title] %></title>
     <link rel="stylesheet" href="stylesheets/stylesheet.css">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+      $(window).scroll(function(){
 
+        var transition_point = $('.nav_transition_point').offset().top - $('nav').outerHeight();
+        var distance = transition_point - $(window).scrollTop();
+
+        if (distance < 0) {
+          $('nav').addClass('solid');
+        } else {
+          $('nav').removeClass('solid');
+        }
+
+      });
+    </script>
     <script src="//use.edgefonts.net/amethysta;brawler;convergence;crete-round.js"></script>
 
     <!-- you don't need to keep this, but it's cool for stats! -->
