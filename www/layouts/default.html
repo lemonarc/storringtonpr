@@ -6,17 +6,31 @@
     <link rel="stylesheet" href="stylesheets/stylesheet.css">
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script>
-      $(window).scroll(function(){
+      $(function() {
+        $(window).scroll(function () {
 
-        var transition_point = $('.nav_transition_point').offset().top - $('nav').outerHeight();
-        var distance = transition_point - $(window).scrollTop();
+          var transition_point = $('.nav_transition_point').offset().top - $('nav').outerHeight();
+          var distance = transition_point - $(window).scrollTop();
 
-        if (distance < 0) {
-          $('nav').addClass('solid');
-        } else {
-          $('nav').removeClass('solid');
-        }
+          if (distance < 0) {
+            $('nav').addClass('solid');
+          } else {
+            $('nav').removeClass('solid');
+          }
 
+        });
+
+        $('.navigation_hamburger').click(function () {
+          if ($(this).hasClass('menu_open')) {
+            $(this).removeClass('menu_open');
+            $('nav').removeClass('menu_open');
+            $(document.body).removeClass('no_scroll');
+          } else {
+            $(this).addClass('menu_open');
+            $('nav').addClass('menu_open');
+            $(document.body).addClass('no_scroll');
+          }
+        });
       });
     </script>
     <script src="//use.edgefonts.net/amethysta;brawler;convergence;crete-round.js"></script>
@@ -30,12 +44,15 @@
         <div class="storrington_logo">
           <a href="/"><img src="/images/storringtonpr_logo.png"/></a>
         </div>
+        <div class="navigation_hamburger">
+          <div class="bun top"></div><div class="bun mid"></div><div class="bun bottom"></div>
+        </div>
         <ul class="navigation_links">
-          <li>About</li>
-          <li>Expertise</li>
-          <li>Clients</li>
-          <li>Testimonials</li>
-          <li>Contact</li>
+          <a href="#"><li>About</li></a>
+          <a href="#"><li>Expertise</li></a>
+          <a href="#"><li>Clients</li></a>
+          <a href="#"><li>Testimonials</li></a>
+          <a href="#"><li>Contact</li></a>
         </ul>
       </div>
     </nav>

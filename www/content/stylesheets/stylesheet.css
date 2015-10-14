@@ -18,6 +18,15 @@ html, body {
   letter-spacing: 0.5px;
   color: #522576; }
 
+body.no_scroll {
+  height: 100%;
+  overflow: hidden; }
+
+a {
+  text-decoration: none; }
+  a, a:active, a:hover, a:visited {
+    color: inherit; }
+
 h1, h2 {
   font-family: crete-round;
   font-weight: lighter; }
@@ -33,13 +42,14 @@ nav {
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.75);
   -webkit-backdrop-filter: blur(5px);
-  -webkit-transition: background-color 0.25s;
-  -moz-transition: background-color 0.25s;
-  transition: background-color 0.25s;
+  -webkit-transition: background-color 0.25s, height 0.5s;
+  -moz-transition: background-color 0.25s, height 0.5s;
+  transition: background-color 0.25s, height 0.5s;
+  overflow: hidden;
   border-bottom: 1px solid #ddd;
   width: 100vw;
   height: 105px;
-  padding: 1rem; }
+  padding: 1rem 0; }
   nav.solid {
     background-color: white; }
   nav .navigation_inner {
@@ -56,24 +66,49 @@ nav {
     display: block;
     margin-right: 2.3576515979%;
     width: 31.7615656014%;
+    padding: 0 20px;
     line-height: 70px; }
     nav .storrington_logo:last-child {
       margin-right: 0; }
     nav .storrington_logo img {
-      width: 100%;
+      max-height: 100%;
+      max-width: 100%;
       position: relative;
       top: 3px;
       vertical-align: middle; }
+  nav .navigation_hamburger {
+    display: none;
+    position: relative;
+    top: 25px; }
+    nav .navigation_hamburger:hover {
+      cursor: pointer; }
+    nav .navigation_hamburger .bun {
+      float: right;
+      clear: right;
+      background-color: #522576;
+      height: 2px;
+      margin: 3px 5px;
+      width: 23px;
+      -webkit-transition: -webkit-transform 100ms, opacity 100ms, width 100ms;
+      -moz-transition: -moz-transform 100ms, opacity 100ms, width 100ms;
+      transition: transform 100ms, opacity 100ms, width 100ms;
+      transform-origin: 100% 45%; }
+    nav .navigation_hamburger.menu_open .bun.top {
+      transform: rotate(-45deg); }
+    nav .navigation_hamburger.menu_open .bun.mid {
+      opacity: 0; }
+    nav .navigation_hamburger.menu_open .bun.bottom {
+      transform: rotate(45deg); }
   nav .navigation_links {
     float: left;
     display: block;
     margin-right: 2.3576515979%;
     width: 65.8807828007%;
+    padding: 0 20px;
     line-height: 70px;
     font-size: 1.4rem;
     text-align: right;
     text-transform: uppercase;
-    padding: 0;
     margin: 0; }
     nav .navigation_links:last-child {
       margin-right: 0; }
@@ -86,7 +121,40 @@ nav {
       margin: 0 0.6rem;
       vertical-align: middle;
       position: relative;
-      top: 5px; }
+      padding-top: 0.25em; }
+  @media screen and (max-width: 880px) {
+    nav.menu_open {
+      height: 100vh; }
+    nav .storrington_logo {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 65.8807828007%; }
+      nav .storrington_logo:last-child {
+        margin-right: 0; }
+    nav .navigation_hamburger {
+      display: block;
+      margin-left: 17.0596085997%;
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 14.7019570017%;
+      margin-right: 0;
+      padding: 0 20px; }
+      nav .navigation_hamburger:last-child {
+        margin-right: 0; }
+    nav .navigation_links {
+      width: 100%;
+      font-size: 2rem;
+      text-align: left; }
+      nav .navigation_links a {
+        width: 100%; }
+        nav .navigation_links a:hover {
+          color: #8446ad;
+          border-bottom-color: #8446ad; }
+      nav .navigation_links li {
+        display: block;
+        border-bottom: 1px solid #8446ad; } }
 
 footer {
   background-color: #522576;
