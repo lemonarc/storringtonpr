@@ -53,6 +53,7 @@ footer {
 
     @include media($mobile) {
       @include fill-parent();
+      margin: 2rem 0;
     }
 
     ul {
@@ -65,5 +66,10 @@ footer {
   .contact_information {
     @include span-columns(4);
     text-align: right;
+
+    @include media($mobile) {
+      @include fill-parent();
+      text-align: center;
+    }
   }
 }

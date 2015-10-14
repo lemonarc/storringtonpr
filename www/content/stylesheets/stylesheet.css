@@ -211,7 +211,8 @@ footer {
       margin-right: 0; }
     @media screen and (max-width: 880px)  {
       footer .sitemap {
-        width: 100%; } }
+        width: 100%;
+        margin: 2rem 0; } }
     footer .sitemap ul {
       list-style: none;
       margin: 0;
@@ -224,6 +225,10 @@ footer {
     text-align: right; }
     footer .contact_information:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 880px)  {
+      footer .contact_information {
+        width: 100%;
+        text-align: center; } }
 
 .hero_splash {
   width: 100vw;
