@@ -248,6 +248,7 @@ footer {
     display: block;
     margin-right: 2.3576515979%;
     width: 40.2913699012%;
+    padding: 0 20px;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -258,6 +259,8 @@ footer {
     text-align: center; }
     .testimonials .testimonial_inner .testimonial_logo:last-child {
       margin-right: 0; }
+    .testimonials .testimonial_inner .testimonial_logo img {
+      width: 100%; }
   .testimonials .testimonial_inner .testimonial_quote {
     float: left;
     display: block;

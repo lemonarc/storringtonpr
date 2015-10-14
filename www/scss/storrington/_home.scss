@@ -80,10 +80,15 @@
     .testimonial_logo {
       @include shift(7);
       @include span-columns(5);
+      @include pad(0 20px);
       position: absolute;
       top: 50%;
       @include transform(translateY(-50%));
       text-align: center;
+
+      img {
+        width: 100%;
+      }
     }
 
     .testimonial_quote {
