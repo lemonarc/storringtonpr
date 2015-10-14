@@ -1,7 +1,69 @@
 footer {
   background-color: $brand-secondary;
   color: white;
-  text-align: center;
   padding: 50px;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+
+  .inner_footer {
+    @include outer-container();
+    position: relative;
+  }
+
+  .identity_section {
+    //position: absolute;
+    //top: 50%;
+    //@include transform(translateY(-50%));
+
+    @include span-columns(4);
+
+    @include media($mobile) {
+      position: static;
+      @include transform(none);
+      @include omega();
+      @include fill-parent();
+      text-align: center;
+    }
+  }
+
+  .copyright_container {
+    white-space: nowrap;
+    .footer_logo {
+      height: 25px;
+      vertical-align: middle;
+    }
+    .copyright_notice {
+      position: relative;
+      top: 0.15em;
+    }
+  }
+
+  .social_icons {
+    @include pad(10px 0 0);
+
+    img {
+      height: 38px;
+      vertical-align: middle;
+    }
+  }
+
+  .sitemap {
+    //@include shift(4);
+    @include span-columns(4);
+    text-align: center;
+
+    @include media($mobile) {
+      @include fill-parent();
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .contact_information {
+    @include span-columns(4);
+    text-align: right;
+  }
 }

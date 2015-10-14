@@ -159,9 +159,71 @@ nav {
 footer {
   background-color: #522576;
   color: white;
-  text-align: center;
   padding: 50px;
-  font-size: 1.5rem; }
+  font-size: 1.1rem; }
+  footer .inner_footer {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; }
+    footer .inner_footer::after {
+      clear: both;
+      content: "";
+      display: table; }
+  footer .identity_section {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%; }
+    footer .identity_section:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 880px)  {
+      footer .identity_section {
+        position: static;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+        margin-right: 0;
+        width: 100%;
+        text-align: center; } }
+  footer .copyright_container {
+    white-space: nowrap; }
+    footer .copyright_container .footer_logo {
+      height: 25px;
+      vertical-align: middle; }
+    footer .copyright_container .copyright_notice {
+      position: relative;
+      top: 0.15em; }
+  footer .social_icons {
+    padding: 10px 0 0; }
+    footer .social_icons img {
+      height: 38px;
+      vertical-align: middle; }
+  footer .sitemap {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%;
+    text-align: center; }
+    footer .sitemap:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 880px)  {
+      footer .sitemap {
+        width: 100%; } }
+    footer .sitemap ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+  footer .contact_information {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%;
+    text-align: right; }
+    footer .contact_information:last-child {
+      margin-right: 0; }
 
 .hero_splash {
   width: 100vw;
