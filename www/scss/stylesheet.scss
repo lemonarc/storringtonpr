@@ -9,6 +9,7 @@
 @import "neat/neat";
 
 /* NEAT VARIABLES */
+$mobile: new-breakpoint(max-width 880px);
 $max-width: rem(1200) !global;
 $default-feature: max-width !global;
 

@@ -92,7 +92,7 @@ nav {
     }
   }
 
-  @include media(880px) {
+  @include media($mobile) {
     &.menu_open {
       height: 100vh;
     }

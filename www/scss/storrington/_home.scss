@@ -53,6 +53,27 @@
     @include omega();
     @include pad(0 20px);
   }
+
+  @include media($mobile) {
+    .header_text {
+      position: static;
+      @include fill-parent();
+      @include transform(none);
+
+      h2 {
+        margin-bottom: 1rem;
+      }
+      h3 {
+        margin: 1rem 0 0;
+      }
+    }
+    .blurb_text {
+      @include shift(0);
+      @include fill-parent();
+      @include pad(0 30px);
+      margin: 0;
+    }
+  }
 }
 
 .testimonial_separator {
@@ -60,13 +81,21 @@
   text-align: center;
   @include pad(20px 0);
 
-  font-size: 1.5em;
+  font-size: 1.5rem;
 
   .testimonial_blurb {
     color: white;
 
     h2, h3 {
       margin: 0.5rem;
+    }
+  }
+
+  @include media($mobile) {
+    @include pad(20px);
+    font-size: 1.1rem;
+    h2 {
+      font-size: 2rem;
     }
   }
 }
@@ -135,4 +164,32 @@
       width: 100%;
     }
   }
+
+  @include media($mobile) {
+
+    .testimonial,
+    .testimonial:nth-child(odd) {
+
+      text-align: center;
+
+      .testimonial_quote {
+        @include fill-parent();
+        @include shift(0);
+
+        blockquote {
+          font-size: 1.1rem;
+        }
+
+      }
+      .testimonial_logo {
+        @include shift(2);
+        @include span-columns(8);
+        position: static;
+        @include transform(none);
+      }
+
+    }
+
+  }
+
 }
