@@ -47,6 +47,7 @@ nav {
   -moz-transition: background-color 0.25s, border-bottom-color 0.25s;
   transition: background-color 0.25s, border-bottom-color 0.25s;
   overflow: hidden;
+  margin-top: -105px;
   width: 100vw;
   height: 105px;
   padding: 1rem 0; }
@@ -160,33 +161,20 @@ nav {
 
 .hero_splash {
   width: calc(100vw - (105px * 2));
-  margin: auto;
-  height: 100vh;
-  padding: 105px 0; }
-  .hero_splash .hero_segment {
-    width: 50%;
-    height: 50%;
-    background-size: cover;
-    float: left;
-    background-position: 50% 50%; }
-  .hero_splash .hero_segment:after {
-    content: '';
+  height: calc(100vh - (105px * 2));
+  margin: 105px auto;
+  background-image: url(/images/residence_on_the_rocks/pool_deck.jpg);
+  background-size: cover;
+  background-position: 50% 50%; }
+  .hero_splash:after {
     display: block;
     background-image: url(/images/the_singular/rooftop_bar.jpg);
     z-index: 10;
-    width: 100%;
-    height: 100%;
+    width: calc(100vw - (105px * 2));
+    height: 100vh;
     background-size: cover;
     background-position: 50% 50%;
     opacity: 0.5; }
-  .hero_splash .top_left {
-    background-image: url(/images/residence_on_the_rocks/pool_deck.jpg); }
-  .hero_splash .top_right {
-    background-image: url(/images/restaurant/group_tables.jpg); }
-  .hero_splash .bottom_left {
-    background-image: url(/images/the_singular/rooftop_bar.jpg); }
-  .hero_splash .bottom_right {
-    background-image: url(/images/crown_and_garter/room_1_straight.jpg); }
 
 footer {
   background-color: #522576;
