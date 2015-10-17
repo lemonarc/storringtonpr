@@ -19,6 +19,12 @@
             $('nav').removeClass('solid');
           }
 
+          if ($(window).scrollTop() > 0) {
+            $('nav').addClass('border');
+          } else {
+            $('nav').removeClass('border');
+          }
+
         });
 
         $('.navigation_hamburger').click(function () {

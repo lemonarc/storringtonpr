@@ -1,28 +1,3 @@
-.hero_splash {
-  width: 100vw;
-  height: 100vh;
-
-  .hero_segment {
-    width: 50%;
-    height: 50%;
-    background-size: cover;
-    float: left;
-    background-position: 50% 50%;
-  }
-  .top_left {
-    background-image: url(/images/residence_on_the_rocks/pool_deck.jpg);
-  }
-  .top_right {
-    background-image: url(/images/restaurant/group_tables.jpg);
-  }
-  .bottom_left {
-    background-image: url(/images/the_singular/rooftop_bar.jpg);
-  }
-  .bottom_right {
-    background-image: url(/images/crown_and_garter/room_1_straight.jpg);
-  }
-}
-
 .home_main_text {
   position: relative;
   @include outer-container($max-width * 0.85);

@@ -1,0 +1,39 @@
+.hero_splash {
+  width: calc(100vw - (#{$navigation-height} * 2));
+  margin: auto;
+  height: 100vh;
+  padding: $navigation-height 0;
+
+  .hero_segment {
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    float: left;
+    background-position: 50% 50%;
+  }
+
+  .hero_segment:after {
+    content: '';
+    display: block;
+    background-image: url(/images/the_singular/rooftop_bar.jpg);
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    opacity: 0.5;
+  }
+
+  .top_left {
+    background-image: url(/images/residence_on_the_rocks/pool_deck.jpg);
+  }
+  .top_right {
+    background-image: url(/images/restaurant/group_tables.jpg);
+  }
+  .bottom_left {
+    background-image: url(/images/the_singular/rooftop_bar.jpg);
+  }
+  .bottom_right {
+    background-image: url(/images/crown_and_garter/room_1_straight.jpg);
+  }
+}

@@ -3,30 +3,34 @@ nav {
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.75);
   -webkit-backdrop-filter: blur(5px);
-  @include transition(background-color 0.25s, height 0.5s);
+  border-bottom: 1px solid #fff;
+  @include transition(background-color 0.25s, border-bottom-color 0.25s);
   overflow: hidden;
 
   &.solid {
     background-color: rgba(255, 255, 255, 1);
   }
 
-  border-bottom: 1px solid #ddd;
+  &.border {
+    border-bottom-color: #ddd;
+  }
+
   width: 100vw;
-  height: 105px;
+  height: $navigation-height;
 
   padding: 1rem 0;
 
-  $navigation_inner_width: 70px;
+  $navigation_inner_height: 70px;
   
   .navigation_inner {
     @include outer-container();
-    height: $navigation_inner_width;
+    height: $navigation_inner_height;
   }
 
   .storrington_logo {
     @include span-columns(4);
     @include pad(0 20px);
-    line-height: $navigation_inner_width;
+    line-height: $navigation_inner_height;
 
     img {
       max-height: 100%;
@@ -73,7 +77,7 @@ nav {
     @include span-columns(8);
     @include pad(0 20px);
 
-    line-height: $navigation_inner_width;
+    line-height: $navigation_inner_height;
     font-size: 1.4rem;
     @include media(1024px) {
       font-size: 1.1rem;
