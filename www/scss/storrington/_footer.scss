@@ -12,9 +12,6 @@ footer {
   }
 
   .identity_section {
-    //position: absolute;
-    //top: 50%;
-    //@include transform(translateY(-50%));
 
     @include span-columns(4);
 

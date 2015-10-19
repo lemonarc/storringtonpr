@@ -1,22 +1,50 @@
-.hero_splash {
-  width: calc(100vw - (#{$navigation-height} * 2));
-  height: calc(100vh - (#{$navigation-height} * 2));
-  margin: $navigation-height auto;
+@keyframes slideshow_under_1 {
+  0%, 100% {
+    background-image: url(/images/residence_on_the_rocks/pool_deck.jpg);
+  }
+}
+@keyframes slideshow_under_2 {
+  0%, 100% {
+    background-image: url(/images/the_singular/rooftop_bar.jpg);
+  }
+}
 
-  background-image: url(/images/residence_on_the_rocks/pool_deck.jpg);
+@keyframes slideshow_over {
+  0%, 100% {
+    background-image: url(/images/crown_and_garter/room_1_straight.jpg);
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    background-image: url(/images/restaurant/group_tables.jpg);
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+
+.hero_splash {
+  width: 100vw;
+  max-width: $max-width;
+  height: calc(100vh - (#{$navigation-height} * 2));
+  max-height: 50vw;
+  margin: $navigation-height auto;
   background-size: cover;
   background-position: 50% 50%;
 
+  animation: slideshow_under_1 10s linear infinite, slideshow_under_2 10s linear 5s infinite;
+
   &:after {
-    //content: '';
+    content: '';
     display: block;
-    background-image: url(/images/the_singular/rooftop_bar.jpg);
     z-index: 10;
     width: calc(100vw - (#{$navigation-height} * 2));
     height: 100vh;
     background-size: cover;
     background-position: 50% 50%;
-    opacity: 0.5;
   }
 
 }

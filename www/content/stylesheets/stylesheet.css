@@ -159,22 +159,46 @@ nav {
         display: block;
         border-bottom: 1px solid #8446ad; } }
 
+@keyframes slideshow_under_1 {
+  0%, 100% {
+    background-image: url(/images/residence_on_the_rocks/pool_deck.jpg); } }
+
+@keyframes slideshow_under_2 {
+  0%, 100% {
+    background-image: url(/images/the_singular/rooftop_bar.jpg); } }
+
+@keyframes slideshow_over {
+  0%, 100% {
+    background-image: url(/images/crown_and_garter/room_1_straight.jpg);
+    opacity: 0; }
+
+  25% {
+    opacity: 1; }
+
+  50% {
+    background-image: url(/images/restaurant/group_tables.jpg);
+    opacity: 0; }
+
+  75% {
+    opacity: 1; } }
+
 .hero_splash {
-  width: calc(100vw - (105px * 2));
+  width: 100vw;
+  max-width: 75rem;
   height: calc(100vh - (105px * 2));
+  max-height: 50vw;
   margin: 105px auto;
-  background-image: url(/images/residence_on_the_rocks/pool_deck.jpg);
   background-size: cover;
-  background-position: 50% 50%; }
+  background-position: 50% 50%;
+  animation: slideshow_under_1 10s linear infinite, slideshow_under_2 10s linear 5s infinite; }
   .hero_splash:after {
+    content: '';
     display: block;
-    background-image: url(/images/the_singular/rooftop_bar.jpg);
     z-index: 10;
     width: calc(100vw - (105px * 2));
     height: 100vh;
     background-size: cover;
-    background-position: 50% 50%;
-    opacity: 0.5; }
+    background-position: 50% 50%; }
 
 footer {
   background-color: #522576;
