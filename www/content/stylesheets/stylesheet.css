@@ -159,6 +159,80 @@ nav {
         display: block;
         border-bottom: 1px solid #8446ad; } }
 
+footer {
+  background-color: #522576;
+  color: white;
+  padding: 50px;
+  font-size: 1.1rem; }
+  footer .inner_footer {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; }
+    footer .inner_footer::after {
+      clear: both;
+      content: "";
+      display: table; }
+  footer .identity_section {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%; }
+    footer .identity_section:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 880px)  {
+      footer .identity_section {
+        position: static;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+        margin-right: 0;
+        width: 100%;
+        text-align: center; } }
+  footer .copyright_container {
+    white-space: nowrap; }
+    footer .copyright_container .footer_logo {
+      height: 25px;
+      vertical-align: middle; }
+    footer .copyright_container .copyright_notice {
+      position: relative;
+      top: 0.15em; }
+  footer .social_icons {
+    padding: 10px 0 0; }
+    footer .social_icons img {
+      height: 38px;
+      vertical-align: middle; }
+  footer .sitemap {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%;
+    text-align: center; }
+    footer .sitemap:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 880px)  {
+      footer .sitemap {
+        width: 100%;
+        margin: 2rem 0; } }
+    footer .sitemap ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+  footer .contact_information {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%;
+    text-align: right; }
+    footer .contact_information:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 880px)  {
+      footer .contact_information {
+        width: 100%;
+        text-align: center; } }
+
 @keyframes slide {
   0%, 100% {
     opacity: 0; }
@@ -308,80 +382,6 @@ nav {
     .splash_divider {
       display: none; } }
 
-footer {
-  background-color: #522576;
-  color: white;
-  padding: 50px;
-  font-size: 1.1rem; }
-  footer .inner_footer {
-    max-width: 75rem;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative; }
-    footer .inner_footer::after {
-      clear: both;
-      content: "";
-      display: table; }
-  footer .identity_section {
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 31.7615656014%; }
-    footer .identity_section:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 880px)  {
-      footer .identity_section {
-        position: static;
-        -webkit-transform: none;
-        -moz-transform: none;
-        -ms-transform: none;
-        -o-transform: none;
-        transform: none;
-        margin-right: 0;
-        width: 100%;
-        text-align: center; } }
-  footer .copyright_container {
-    white-space: nowrap; }
-    footer .copyright_container .footer_logo {
-      height: 25px;
-      vertical-align: middle; }
-    footer .copyright_container .copyright_notice {
-      position: relative;
-      top: 0.15em; }
-  footer .social_icons {
-    padding: 10px 0 0; }
-    footer .social_icons img {
-      height: 38px;
-      vertical-align: middle; }
-  footer .sitemap {
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 31.7615656014%;
-    text-align: center; }
-    footer .sitemap:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 880px)  {
-      footer .sitemap {
-        width: 100%;
-        margin: 2rem 0; } }
-    footer .sitemap ul {
-      list-style: none;
-      margin: 0;
-      padding: 0; }
-  footer .contact_information {
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 31.7615656014%;
-    text-align: right; }
-    footer .contact_information:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 880px)  {
-      footer .contact_information {
-        width: 100%;
-        text-align: center; } }
-
 .home_main_text {
   position: relative;
   max-width: 63.75rem;
@@ -443,98 +443,3 @@ footer {
       padding: 0 30px;
       margin: 0;
       font-size: 1rem; } }
-
-.testimonial_separator {
-  background-color: #8446ad;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 1.5rem; }
-  .testimonial_separator .testimonial_blurb {
-    color: white; }
-    .testimonial_separator .testimonial_blurb h2, .testimonial_separator .testimonial_blurb h3 {
-      margin: 0.5rem; }
-  @media screen and (max-width: 880px)  {
-    .testimonial_separator {
-      padding: 20px;
-      font-size: 1.1rem; }
-      .testimonial_separator h2 {
-        font-size: 2rem; } }
-
-.testimonials .testimonial_inner {
-  max-width: 75rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 30px 0;
-  position: relative; }
-  .testimonials .testimonial_inner::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .testimonials .testimonial_inner .testimonial_logo {
-    margin-left: 59.7086300988%;
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 40.2913699012%;
-    padding: 0 20px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    text-align: center; }
-    .testimonials .testimonial_inner .testimonial_logo:last-child {
-      margin-right: 0; }
-    .testimonials .testimonial_inner .testimonial_logo img {
-      width: 100%; }
-  .testimonials .testimonial_inner .testimonial_quote {
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 57.3509785009%; }
-    .testimonials .testimonial_inner .testimonial_quote:last-child {
-      margin-right: 0; }
-    .testimonials .testimonial_inner .testimonial_quote blockquote {
-      font-size: 1.3rem; }
-.testimonials .testimonial:nth-child(odd) {
-  text-align: right; }
-  .testimonials .testimonial:nth-child(odd) .testimonial_logo {
-    margin-left: 0%; }
-  .testimonials .testimonial:nth-child(odd) .testimonial_quote {
-    margin-left: 42.6490214991%; }
-.testimonials .testimonial.evian_resort cite {
-  color: #9b8ea6; }
-.testimonials .testimonial.crown_and_garter {
-  background-color: #95d4cb;
-  color: #181d21; }
-  .testimonials .testimonial.crown_and_garter cite {
-    color: #6d6965; }
-.testimonials .testimonial.desroches_island cite {
-  color: #9b8ea6; }
-.testimonials .testimonial.desroches_island img {
-  display: block;
-  width: 100%; }
-@media screen and (max-width: 880px)  {
-  .testimonials .testimonial, .testimonials .testimonial:nth-child(odd) {
-    text-align: center; }
-    .testimonials .testimonial .testimonial_quote, .testimonials .testimonial:nth-child(odd) .testimonial_quote {
-      width: 100%;
-      margin-left: 0%; }
-      .testimonials .testimonial .testimonial_quote blockquote, .testimonials .testimonial:nth-child(odd) .testimonial_quote blockquote {
-        font-size: 1.1rem; }
-    .testimonials .testimonial .testimonial_logo, .testimonials .testimonial:nth-child(odd) .testimonial_logo {
-      margin-left: 17.0596085997%;
-      float: left;
-      display: block;
-      margin-right: 2.3576515979%;
-      width: 65.8807828007%;
-      position: static;
-      -webkit-transform: none;
-      -moz-transform: none;
-      -ms-transform: none;
-      -o-transform: none;
-      transform: none; }
-      .testimonials .testimonial .testimonial_logo:last-child, .testimonials .testimonial:nth-child(odd) .testimonial_logo:last-child {
-        margin-right: 0; } }
