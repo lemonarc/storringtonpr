@@ -74,7 +74,7 @@
       blockquote {
         z-index: 1;
         padding: 1rem;
-        animation: testimonial 10s linear infinite;
+        @include animation(testimonial 10s linear infinite);
         font-size: 3rem;
         line-height: 3rem;
 
@@ -97,19 +97,19 @@
 
     &.slide_1 {
       background-image: url(/images/residence_on_the_rocks/pool_deck.jpg);
-      animation: slide 40s linear infinite;
+      @include animation(slide 40s linear 0.5s infinite);
     }
     &.slide_2 {
       background-image: url(/images/the_singular/rooftop_bar.jpg);
-      animation: slide 40s linear 10s infinite;
+      @include animation(slide 40s linear 10s infinite);
     }
     &.slide_3 {
       background-image: url(/images/crown_and_garter/room_1_straight.jpg);
-      animation: slide 40s linear 20s infinite;
+      @include animation(slide 40s linear 20s infinite);
     }
     &.slide_4 {
       background-image: url(/images/restaurant/group_tables.jpg);
-      animation: slide 40s linear 30s infinite;
+      @include animation(slide 40s linear 30s infinite);
     }
   }
 }

@@ -251,6 +251,8 @@ nav {
       .hero_splash .hero_slide .testimonial blockquote {
         z-index: 1;
         padding: 1rem;
+        -webkit-animation: testimonial 10s linear infinite;
+        -moz-animation: testimonial 10s linear infinite;
         animation: testimonial 10s linear infinite;
         font-size: 3rem;
         line-height: 3rem; }
@@ -267,15 +269,23 @@ nav {
         font-size: 0.6em; }
     .hero_splash .hero_slide.slide_1 {
       background-image: url(/images/residence_on_the_rocks/pool_deck.jpg);
-      animation: slide 40s linear infinite; }
+      -webkit-animation: slide 40s linear 0.5s infinite;
+      -moz-animation: slide 40s linear 0.5s infinite;
+      animation: slide 40s linear 0.5s infinite; }
     .hero_splash .hero_slide.slide_2 {
       background-image: url(/images/the_singular/rooftop_bar.jpg);
+      -webkit-animation: slide 40s linear 10s infinite;
+      -moz-animation: slide 40s linear 10s infinite;
       animation: slide 40s linear 10s infinite; }
     .hero_splash .hero_slide.slide_3 {
       background-image: url(/images/crown_and_garter/room_1_straight.jpg);
+      -webkit-animation: slide 40s linear 20s infinite;
+      -moz-animation: slide 40s linear 20s infinite;
       animation: slide 40s linear 20s infinite; }
     .hero_splash .hero_slide.slide_4 {
       background-image: url(/images/restaurant/group_tables.jpg);
+      -webkit-animation: slide 40s linear 30s infinite;
+      -moz-animation: slide 40s linear 30s infinite;
       animation: slide 40s linear 30s infinite; }
 
 .splash_divider {
