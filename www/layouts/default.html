@@ -21,8 +21,10 @@
 
           if ($(window).scrollTop() > 0) {
             $('nav').addClass('border');
+            $('.splash_divider').addClass('hidden');
           } else {
             $('nav').removeClass('border');
+            $('.splash_divider').removeClass('hidden');
           }
 
         });
@@ -37,6 +39,10 @@
             $('nav').addClass('menu_open');
             $(document.body).addClass('no_scroll');
           }
+        });
+
+        $('.splash_divider').click(function () {
+          $('html, body').animate({scrollTop: $(this).offset().top}, 1000);
         });
       });
     </script>

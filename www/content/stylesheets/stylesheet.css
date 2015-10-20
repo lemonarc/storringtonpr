@@ -43,9 +43,9 @@ nav {
   background-color: rgba(255, 255, 255, 0.75);
   -webkit-backdrop-filter: blur(5px);
   border-bottom: 1px solid #fff;
-  -webkit-transition: background-color 0.25s, border-bottom-color 0.25s;
-  -moz-transition: background-color 0.25s, border-bottom-color 0.25s;
-  transition: background-color 0.25s, border-bottom-color 0.25s;
+  -webkit-transition: background-color 0.25s, border-bottom-color 0.25s, height 0.5s;
+  -moz-transition: background-color 0.25s, border-bottom-color 0.25s, height 0.5s;
+  transition: background-color 0.25s, border-bottom-color 0.25s, height 0.5s;
   overflow: hidden;
   margin-top: -105px;
   width: 100vw;
@@ -159,46 +159,144 @@ nav {
         display: block;
         border-bottom: 1px solid #8446ad; } }
 
-@keyframes slideshow_under_1 {
+@keyframes slide {
   0%, 100% {
-    background-image: url(/images/residence_on_the_rocks/pool_deck.jpg); } }
-
-@keyframes slideshow_under_2 {
-  0%, 100% {
-    background-image: url(/images/the_singular/rooftop_bar.jpg); } }
-
-@keyframes slideshow_over {
-  0%, 100% {
-    background-image: url(/images/crown_and_garter/room_1_straight.jpg);
     opacity: 0; }
+
+  2% {
+    opacity: 1; }
 
   25% {
     opacity: 1; }
 
-  50% {
-    background-image: url(/images/restaurant/group_tables.jpg);
-    opacity: 0; }
+  27% {
+    opacity: 0; } }
 
-  75% {
-    opacity: 1; } }
+@keyframes testimonial {
+  0%, 2% {
+    -webkit-transform: translateX(-200%) translateY(-50%);
+    -moz-transform: translateX(-200%) translateY(-50%);
+    -ms-transform: translateX(-200%) translateY(-50%);
+    -o-transform: translateX(-200%) translateY(-50%);
+    transform: translateX(-200%) translateY(-50%); }
+
+  14% {
+    -webkit-transform: translateX(-5%) translateY(-50%);
+    -moz-transform: translateX(-5%) translateY(-50%);
+    -ms-transform: translateX(-5%) translateY(-50%);
+    -o-transform: translateX(-5%) translateY(-50%);
+    transform: translateX(-5%) translateY(-50%); }
+
+  15% {
+    -webkit-transform: translateX(-1%) translateY(-50%);
+    -moz-transform: translateX(-1%) translateY(-50%);
+    -ms-transform: translateX(-1%) translateY(-50%);
+    -o-transform: translateX(-1%) translateY(-50%);
+    transform: translateX(-1%) translateY(-50%); }
+
+  89% {
+    -webkit-transform: translateX(1%) translateY(-50%);
+    -moz-transform: translateX(1%) translateY(-50%);
+    -ms-transform: translateX(1%) translateY(-50%);
+    -o-transform: translateX(1%) translateY(-50%);
+    transform: translateX(1%) translateY(-50%); }
+
+  90% {
+    -webkit-transform: translateX(5%) translateY(-50%);
+    -moz-transform: translateX(5%) translateY(-50%);
+    -ms-transform: translateX(5%) translateY(-50%);
+    -o-transform: translateX(5%) translateY(-50%);
+    transform: translateX(5%) translateY(-50%); }
+
+  98%, 100% {
+    -webkit-transform: translateX(200%) translateY(-50%);
+    -moz-transform: translateX(200%) translateY(-50%);
+    -ms-transform: translateX(200%) translateY(-50%);
+    -o-transform: translateX(200%) translateY(-50%);
+    transform: translateX(200%) translateY(-50%); } }
 
 .hero_splash {
   width: 100vw;
   max-width: 75rem;
   height: calc(100vh - (105px * 2));
   max-height: 50vw;
-  margin: 105px auto;
-  background-size: cover;
-  background-position: 50% 50%;
-  animation: slideshow_under_1 10s linear infinite, slideshow_under_2 10s linear 5s infinite; }
-  .hero_splash:after {
-    content: '';
-    display: block;
-    z-index: 10;
-    width: calc(100vw - (105px * 2));
-    height: 100vh;
+  margin: 105px auto 0;
+  position: relative;
+  overflow: hidden; }
+  .hero_splash .hero_slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     background-size: cover;
-    background-position: 50% 50%; }
+    background-position: 50% 50%;
+    opacity: 0; }
+    .hero_splash .hero_slide .testimonial {
+      width: 100%;
+      height: 100%;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.35);
+      margin: 0;
+      text-shadow: 0 0 7px #000;
+      text-align: center; }
+      .hero_splash .hero_slide .testimonial blockquote, .hero_splash .hero_slide .testimonial cite {
+        transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        -webkit-font-smoothing: subpixel-antialiased;
+        display: block;
+        margin: 0;
+        position: relative;
+        top: 50%; }
+      .hero_splash .hero_slide .testimonial blockquote {
+        z-index: 1;
+        padding: 1rem;
+        animation: testimonial 10s linear infinite;
+        font-size: 3rem;
+        line-height: 3rem; }
+        @media screen and (max-width: 880px)  {
+          .hero_splash .hero_slide .testimonial blockquote {
+            font-size: 2rem;
+            line-height: 2rem; } }
+        @media screen and (max-width: 500px)  {
+          .hero_splash .hero_slide .testimonial blockquote {
+            font-size: 1.3rem;
+            line-height: 1.3rem; } }
+      .hero_splash .hero_slide .testimonial cite {
+        margin-top: 0.5em;
+        font-size: 0.6em; }
+    .hero_splash .hero_slide.slide_1 {
+      background-image: url(/images/residence_on_the_rocks/pool_deck.jpg);
+      animation: slide 40s linear infinite; }
+    .hero_splash .hero_slide.slide_2 {
+      background-image: url(/images/the_singular/rooftop_bar.jpg);
+      animation: slide 40s linear 10s infinite; }
+    .hero_splash .hero_slide.slide_3 {
+      background-image: url(/images/crown_and_garter/room_1_straight.jpg);
+      animation: slide 40s linear 20s infinite; }
+    .hero_splash .hero_slide.slide_4 {
+      background-image: url(/images/restaurant/group_tables.jpg);
+      animation: slide 40s linear 30s infinite; }
+
+.splash_divider {
+  height: 105px;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+  .splash_divider p {
+    margin: 1.1rem 0 0;
+    line-height: 2.4rem; }
+  .splash_divider img {
+    height: 1.5rem; }
+  .splash_divider.hidden {
+    opacity: 0;
+    cursor: inherit; }
+  @media screen and (max-width: 75rem) {
+    .splash_divider {
+      display: none; } }
 
 footer {
   background-color: #522576;

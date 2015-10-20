@@ -10,6 +10,7 @@
 
 /* NEAT VARIABLES */
 $mobile: new-breakpoint(max-width 880px);
+$smaller-mobile: new-breakpoint(max-width 500px);
 $max-width: rem(1200) !global;
 $default-feature: max-width !global;
 
