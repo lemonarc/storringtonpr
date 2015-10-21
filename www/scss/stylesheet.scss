@@ -5,13 +5,16 @@
 /* IMPORT BOURBON */
 @import "bourbon/bourbon";
 
+//$visual-grid: true !global;
+$max-width: rem(1200) !global;
+
 /* IMPORT NEAT */
 @import "neat/neat";
 
 /* NEAT VARIABLES */
+$soft-shrink: new-breakpoint(max-width 1024px);
 $mobile: new-breakpoint(max-width 880px);
 $smaller-mobile: new-breakpoint(max-width 500px);
-$max-width: rem(1200) !global;
 $default-feature: max-width !global;
 
 /* IMPORT STORRINGTON STYLESHEETS */
