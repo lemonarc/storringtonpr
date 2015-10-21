@@ -474,3 +474,21 @@ footer {
       margin-right: 0; }
     .hotel_section .hotel_box:last-child {
       margin-right: 0; }
+    .hotel_section .hotel_box h3 {
+      background-color: transparent;
+      background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+      background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+      margin: 0;
+      padding: 0 0.5em; }
+    .hotel_section .hotel_box .hotel_box_header {
+      color: white;
+      font-size: 2rem;
+      padding-top: 35%;
+      background-size: cover;
+      background-position: 50% 50%; }
+    .hotel_section .hotel_box.hospitality .hotel_box_header {
+      background-image: url(/images/restaurant/fireplace.jpg); }
+    .hotel_section .hotel_box.private_islands .hotel_box_header {
+      background-image: url(/images/private_island.jpg); }
+    .hotel_section .hotel_box.tourism .hotel_box_header {
+      background-image: url(/images/tourism.jpg); }
