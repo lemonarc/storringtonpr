@@ -255,35 +255,35 @@ footer {
     -o-transform: translateX(-200%) translateY(-50%);
     transform: translateX(-200%) translateY(-50%); }
 
-  14% {
+  9% {
     -webkit-transform: translateX(-5%) translateY(-50%);
     -moz-transform: translateX(-5%) translateY(-50%);
     -ms-transform: translateX(-5%) translateY(-50%);
     -o-transform: translateX(-5%) translateY(-50%);
     transform: translateX(-5%) translateY(-50%); }
 
-  15% {
+  10% {
     -webkit-transform: translateX(-1%) translateY(-50%);
     -moz-transform: translateX(-1%) translateY(-50%);
     -ms-transform: translateX(-1%) translateY(-50%);
     -o-transform: translateX(-1%) translateY(-50%);
     transform: translateX(-1%) translateY(-50%); }
 
-  89% {
+  96% {
     -webkit-transform: translateX(1%) translateY(-50%);
     -moz-transform: translateX(1%) translateY(-50%);
     -ms-transform: translateX(1%) translateY(-50%);
     -o-transform: translateX(1%) translateY(-50%);
     transform: translateX(1%) translateY(-50%); }
 
-  90% {
+  97% {
     -webkit-transform: translateX(5%) translateY(-50%);
     -moz-transform: translateX(5%) translateY(-50%);
     -ms-transform: translateX(5%) translateY(-50%);
     -o-transform: translateX(5%) translateY(-50%);
     transform: translateX(5%) translateY(-50%); }
 
-  98%, 100% {
+  100% {
     -webkit-transform: translateX(200%) translateY(-50%);
     -moz-transform: translateX(200%) translateY(-50%);
     -ms-transform: translateX(200%) translateY(-50%);

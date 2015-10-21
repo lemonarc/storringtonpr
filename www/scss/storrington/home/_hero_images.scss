@@ -16,19 +16,19 @@
   0%, 2% {
     @include transform(translateX(-200%) translateY(-50%));
   }
-  14% {
+  9% {
     @include transform(translateX(-5%) translateY(-50%));
   }
-  15% {
+  10% {
     @include transform(translateX(-1%) translateY(-50%));
   }
-  89% {
+  96% {
     @include transform(translateX(1%) translateY(-50%));
   }
-  90% {
+  97% {
     @include transform(translateX(5%) translateY(-50%));
   }
-  98%, 100% {
+  100% {
     @include transform(translateX(200%) translateY(-50%));
   }
 }
