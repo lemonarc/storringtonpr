@@ -1,0 +1,45 @@
+.hotel_section {
+
+  @include outer-container();
+
+  .hotel_introduction {
+
+    @include fill-parent();
+
+    font-size: 1.1rem;
+
+    color: white;
+    background-color: $brand-primary;
+    padding: 1rem 2rem;
+
+    margin-bottom: 2rem;
+
+    h2 {
+      text-align: center;
+      margin: 1rem 0 2rem;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+
+  .hotel_box {
+    @include span-columns(4);
+    @include omega(auto);
+
+    h3 {
+
+    }
+    &.hospitality h3 {
+      //background-image: url();
+    }
+    &.private_islands h3 {
+      //background-image: url();
+    }
+    &.tourism h3 {
+      //background-image: url();
+    }
+  }
+
+  margin-bottom: 2rem;
+}
