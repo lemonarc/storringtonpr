@@ -841,6 +841,7 @@ div.sectors_navigation {
     display: block;
     margin-right: 2.3576515979%;
     width: 31.7615656014%;
+    cursor: pointer;
     line-height: 200px; }
     .client_testimonials .client_testimonial_logo:last-child {
       margin-right: 0; }
@@ -855,10 +856,20 @@ div.sectors_navigation {
     display: block;
     margin-right: 2.3576515979%;
     width: 82.9403914003%;
+    -webkit-transition: max-height 1s, opacity 0.5s;
+    -moz-transition: max-height 1s, opacity 0.5s;
+    transition: max-height 1s, opacity 0.5s;
     clear: both;
-    text-align: justify; }
+    text-align: justify;
+    font-size: 1.2em;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden; }
     .client_testimonials .client_testimonial_text:last-child {
       margin-right: 0; }
+    .client_testimonials .client_testimonial_text.expand {
+      opacity: 1;
+      max-height: 600px; }
     .client_testimonials .client_testimonial_text blockquote {
       margin: 1rem; }
 

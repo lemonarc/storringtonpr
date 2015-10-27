@@ -4,6 +4,8 @@
   .client_testimonial_logo {
     @include span-columns(4);
 
+    cursor: pointer;
+
     line-height: 200px;
     img {
       vertical-align: middle;
@@ -18,8 +20,21 @@
   .client_testimonial_text {
     @include shift(1);
     @include span-columns(10);
+
+    @include transition(max-height 1s, opacity 0.5s);
+
     clear: both;
     text-align: justify;
+    font-size: 1.2em;
+
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    &.expand {
+      opacity: 1;
+      max-height: 600px;
+    }
 
     blockquote {
       margin: 1rem;

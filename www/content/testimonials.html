@@ -4,17 +4,26 @@ title: Testimonials
 
 <h2 class="page_header nav_transition_point">Client Testimonials</h2>
 
+<script>
+    $(function(){
+        $('.client_testimonial_logo').click(function(){
+            var client = $(this).data('testimonial');
+            $('.client_testimonial_text').removeClass('expand');
+            $('.testimonial_' + client).addClass('expand');
+        });
+    });
+</script>
 <section class="client_testimonials">
 
-    <div class="client_testimonial_logo">
+    <div data-testimonial="evian" class="client_testimonial_logo">
         <img src="/images/client-logos/evian_resort_logo.png"/>
     </div>
 
-    <div class="client_testimonial_logo">
+    <div data-testimonial="fet" class="client_testimonial_logo">
         <img src="/images/client-logos/food-education-trust.jpg"/>
     </div>
 
-    <div class="client_testimonial_logo">
+    <div data-testimonial="desroches" class="client_testimonial_logo">
         <img src="/images/client-logos/desroches-island.gif"/>
     </div>
 
@@ -25,6 +34,26 @@ title: Testimonials
             <cite>Karine Zegrir — PR Manager Evian Resort</cite>
         </blockquote>
     </div>
+
+    <div class="client_testimonial_text testimonial_fet">
+        <blockquote>
+            <p>Storrington Communications have provided me with a huge amount of coverage for my books and other businesses. The coverage has been both trade and consumer coverage.</p>
+            <p>Being a small agency you get a very personal service from Storrington Communications. I have over the years built up a close relationship with Li Boatwright and can call her to discuss initial ideas for coverage. She always sounds thing out before she tries things, so I feel I have a final say on any decision.</p>
+            <p>Storrington Communications are always ahead of the game when it comes to news releases, reacting quickly to news developments or being proactive when it comes to certain issues. I have worked with Li since 2008 and would recommend her hard work and dedication.</p>
+            <cite>Romilla Arber — Founder of the Food Education Trust</cite>
+        </blockquote>
+    </div>
+
+    <div class="client_testimonial_text testimonial_desroches">
+        <blockquote>
+            <p>We had the privilege and pleasure of working with Li Boatwright and Storrington PR for the past five years. Li and Storrington were an integral part of our sales and marketing team and played an instrumental role in improving the publicity and coverage of Desroches Island Lodge Limited (“Desroches”) and consequentially growing our revenue through improved occupancies.</p>
+            <p>Personal, approachable and professional sums up Storrington PR. Li and her team consistently provided us with a stream of coverage in target publications that enhanced our brand and created awareness of our property both in the UK and internationally. Li and Storrington worked so closely with us to develop creative ideas and new marketing concepts, coupled by always going the extra mile, resulting in us never viewed Storrington as an external agency, but rather a part of our own internal team. It is the high level of personal service and sacrifice that sets Storrington apart.</p>
+            <p>Nothing was ever too much trouble and no deadline unachievable for Li. Her enthusiastic approach is refreshing and her passion for Desroches was evident throughout the whole five years we worked with Storrington.</p>
+            <p>We wish Li and Storrington PR all the very best and unequivocally recommend their services.</p>
+            <cite>Mr L.M. Ward — Director</cite>
+        </blockquote>
+    </div>
+
 </section>
 
 <h2 class="page_header">Media Testimonials</h2>
