@@ -219,8 +219,9 @@ footer {
       position: relative;
       top: 0.15em; }
   footer .social_icons {
-    padding: 10px 0 0; }
+    padding: 10px 10px 0; }
     footer .social_icons img {
+      padding: 4px 10px;
       height: 38px;
       vertical-align: middle; }
   footer .sitemap {

@@ -35,9 +35,10 @@ footer {
   }
 
   .social_icons {
-    @include pad(10px 0 0);
+    @include pad(10px 10px 0);
 
     img {
+      @include pad(4px 10px);
       height: 38px;
       vertical-align: middle;
     }
