@@ -9,6 +9,21 @@
       vertical-align: middle;
       width: 100%;
     }
+
+    &:nth-child(3) {
+      @include omega();
+    }
+  }
+
+  .client_testimonial_text {
+    @include shift(1);
+    @include span-columns(10);
+    clear: both;
+    text-align: justify;
+
+    blockquote {
+      margin: 1rem;
+    }
   }
 }
 

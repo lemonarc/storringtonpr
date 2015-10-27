@@ -847,6 +847,20 @@ div.sectors_navigation {
     .client_testimonials .client_testimonial_logo img {
       vertical-align: middle;
       width: 100%; }
+    .client_testimonials .client_testimonial_logo:nth-child(3) {
+      margin-right: 0; }
+  .client_testimonials .client_testimonial_text {
+    margin-left: 8.5298042998%;
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 82.9403914003%;
+    clear: both;
+    text-align: justify; }
+    .client_testimonials .client_testimonial_text:last-child {
+      margin-right: 0; }
+    .client_testimonials .client_testimonial_text blockquote {
+      margin: 1rem; }
 
 .media_testimonial {
   overflow: hidden;
