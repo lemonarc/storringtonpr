@@ -770,7 +770,8 @@ div.sectors_navigation {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
-  position: relative; }
+  position: relative;
+  font-size: 1.2em; }
   .our-approach-main::after {
     clear: both;
     content: "";
@@ -817,7 +818,7 @@ div.sectors_navigation {
     text-align: center;
     margin-top: 0; }
   .team_box.hidden {
-    opacity: 0.4; }
+    opacity: 0.25; }
     .team_box.hidden h4 {
       opacity: 0; }
   .team_box.expand h4 {

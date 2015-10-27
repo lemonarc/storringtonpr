@@ -1,6 +1,7 @@
 .our-approach-main {
   @include outer-container();
   position: relative;
+  font-size: 1.2em;
 }
 .team_bio {
 
@@ -43,7 +44,7 @@
   }
 
   &.hidden {
-    opacity: 0.4;
+    opacity: 0.25;
     h4 {
       opacity: 0;
     }
