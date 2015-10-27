@@ -13,6 +13,7 @@ $max-width: rem(1200) !global;
 
 /* NEAT VARIABLES */
 $soft-shrink: new-breakpoint(max-width 1024px);
+$larger-than-mobile: new-breakpoint(min-width 880px);
 $mobile: new-breakpoint(max-width 880px);
 $smaller-mobile: new-breakpoint(max-width 500px);
 $default-feature: max-width !global;
@@ -23,3 +24,5 @@ $default-feature: max-width !global;
 @import "storrington/footer";
 @import "storrington/home";
 @import "storrington/expertise";
+@import "storrington/clients";
+@import "storrington/our-approach";

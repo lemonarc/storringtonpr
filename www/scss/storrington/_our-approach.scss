@@ -1,0 +1,63 @@
+.our-approach-main {
+  @include outer-container();
+  position: relative;
+}
+.team_bio {
+
+  @include transition(max-height 1.5s);
+
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  max-height: 0px;
+  overflow: hidden;
+
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 18.05%; 	/* initial ratio of 1:1*/
+  }
+
+  div {
+    background-color: $brand-primary;
+    @include pad(10px 20px);
+    color: white;
+  }
+
+}
+
+.team_box {
+  @include span-columns(2.4);
+  @include transition(opacity 1s);
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+  }
+  h4 {
+    @include transition(opacity 1s);
+    text-align: center;
+    margin-top: 0;
+  }
+
+  &.hidden {
+    opacity: 0.4;
+    h4 {
+      opacity: 0;
+    }
+  }
+
+  &.expand {
+    h4 {
+      opacity: 0;
+    }
+    &+.team_bio {
+      max-height: 1000px;
+    }
+  }
+}
+.team_box:nth-last-of-type(2) {
+  @include omega();
+}

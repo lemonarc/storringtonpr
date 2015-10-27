@@ -109,6 +109,28 @@ title: Expertise
             var jump_to = "sector_" + $(this).data("sector");
             $('html, body').animate({scrollTop: $('#' + jump_to).offset().top - 120}, 1000);
         });
+
+        $(window).scroll(function () {
+
+            var transition_point = $('.nav_transition_point').offset().top - $('nav').outerHeight();
+            var expertise_transition_point = $('.expertise_nav_transition_point').offset().top - $('nav').outerHeight();
+
+            var distance = transition_point - $(window).scrollTop();
+            var expertise_distance = expertise_transition_point - $(window).scrollTop();
+
+
+            if (distance < 0) {
+                $('nav').addClass('solid');
+            } else {
+                $('nav').removeClass('solid');
+            }
+
+            if (expertise_distance < 0) {
+                $('.sectors_navigation').removeClass('hidden');
+            } else {
+                $('.sectors_navigation').addClass('hidden');
+            }
+        });
     });
 </script>
 </script>

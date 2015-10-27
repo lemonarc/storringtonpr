@@ -1,6 +1,6 @@
 div.sectors_navigation {
   position: fixed;
-  z-index: 2;
+  z-index: 30;
   border-bottom: 1px solid #fff;
   @include transition(height 1s);
   overflow: auto;

@@ -1,7 +1,7 @@
 nav {
   position: fixed;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 20;
+  background-color: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(5px);
   border-bottom: 1px solid #fff;
   @include transition(background-color 0.25s, border-bottom-color 0.25s, height 0.5s);

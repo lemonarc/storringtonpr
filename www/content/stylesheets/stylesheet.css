@@ -42,10 +42,23 @@ h2 {
 h3 {
   font-weight: lighter; }
 
+.page_header {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px 0.5em;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #8446ad; }
+  .page_header::after {
+    clear: both;
+    content: "";
+    display: table; }
+
 nav {
   position: fixed;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.75);
+  z-index: 20;
+  background-color: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(5px);
   border-bottom: 1px solid #fff;
   -webkit-transition: background-color 0.25s, border-bottom-color 0.25s, height 0.5s;
@@ -620,7 +633,7 @@ footer {
 
 div.sectors_navigation {
   position: fixed;
-  z-index: 2;
+  z-index: 30;
   border-bottom: 1px solid #fff;
   -webkit-transition: height 1s;
   -moz-transition: height 1s;
@@ -665,3 +678,114 @@ div.sectors_navigation {
     background-image: url(/images/sectors/thumbnails/golf.jpg); }
   div.sectors_navigation #sn_villas {
     background-image: url(/images/sectors/thumbnails/villa.jpg); }
+
+.clients_container {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem; }
+  .clients_container::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .clients_container a {
+    display: block;
+    padding: 20px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center; }
+    @media screen and (min-width: 880px)  {
+      .clients_container a {
+        float: left;
+        display: block;
+        margin-right: 2.3576515979%;
+        width: 31.7615656014%; }
+        .clients_container a:last-child {
+          margin-right: 0; }
+        .clients_container a:nth-child(3n) {
+          margin-right: 0; }
+        .clients_container a:nth-child(3n+1) {
+          clear: left; } }
+    @media screen and (max-width: 880px)  {
+      .clients_container a {
+        float: left;
+        display: block;
+        margin-right: 2.3576515979%;
+        width: 48.821174201%; }
+        .clients_container a:last-child {
+          margin-right: 0; }
+        .clients_container a:nth-child(2n) {
+          margin-right: 0; }
+        .clients_container a:nth-child(2n+1) {
+          clear: left; } }
+    @media screen and (max-width: 500px)  {
+      .clients_container a {
+        width: 100%;
+        margin-right: 0; } }
+    .clients_container a img {
+      max-width: 100%;
+      max-height: 100%;
+      display: inline-block;
+      vertical-align: middle; }
+
+.our-approach-main {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }
+  .our-approach-main::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.team_bio {
+  -webkit-transition: max-height 1.5s;
+  -moz-transition: max-height 1.5s;
+  transition: max-height 1.5s;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  max-height: 0px;
+  overflow: hidden; }
+  .team_bio:before {
+    content: "";
+    display: block;
+    padding-top: 18.05%;
+    /* initial ratio of 1:1*/ }
+  .team_bio div {
+    background-color: #8446ad;
+    padding: 10px 20px;
+    color: white; }
+
+.team_box {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 18.1138787216%;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  transition: opacity 1s;
+  position: relative;
+  z-index: 10;
+  cursor: pointer; }
+  .team_box:last-child {
+    margin-right: 0; }
+  .team_box img {
+    width: 100%; }
+  .team_box h4 {
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    transition: opacity 1s;
+    text-align: center;
+    margin-top: 0; }
+  .team_box.hidden {
+    opacity: 0.4; }
+    .team_box.hidden h4 {
+      opacity: 0; }
+  .team_box.expand h4 {
+    opacity: 0; }
+  .team_box.expand + .team_bio {
+    max-height: 1000px; }
+
+.team_box:nth-last-of-type(2) {
+  margin-right: 0; }

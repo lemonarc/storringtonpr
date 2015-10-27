@@ -44,3 +44,12 @@ h2 {
 h3 {
   font-weight: lighter;
 }
+
+.page_header {
+  @include outer-container();
+  @include pad(0 20px 0.5em);
+
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid $brand-primary;
+}
