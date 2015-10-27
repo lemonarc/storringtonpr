@@ -16,8 +16,6 @@
     background-color: $brand-primary;
     padding: 1rem 2rem;
 
-    margin-bottom: 2rem;
-
     h2 {
       text-align: center;
       margin: 1rem 0 2rem;
@@ -27,9 +25,15 @@
     }
   }
 
+  .hotel_instructions {
+    font-size: 1.3em;
+    text-align: center;
+    margin: 1.5em 0 0;
+  }
+
   .hotel_box {
     @include span-columns(4);
-    @include omega(auto);
+    @include omega(3n + 2);
 
     @include media($mobile) {
       @include fill-parent();
@@ -39,13 +43,22 @@
       }
     }
 
+    margin-top: 2rem;
+
     h3 {
       @include linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+      font-size: 0.8em;
       margin: 0;
       padding: 0 0.5em;
 
       @include media($soft-shrink) {
-        font-size: 0.8em;
+        font-size: 0.6em;
+      }
+      @include media($mobile) {
+        font-size: 1em;
+      }
+      @include media($smaller-mobile) {
+        font-size: 0.7em;
       }
     }
 
@@ -61,15 +74,23 @@
       }
 
     }
-    &.hospitality .hotel_box_header {
-      background-image: url(/images/restaurant/fireplace.jpg);
+    &.restaurants_and_venues .hotel_box_header {
+      background-image: url(/images/sectors/restaurant.jpg);
+    }
+    &.hotels_and_safari .hotel_box_header {
+      background-image: url(/images/sectors/hotel.jpg);
+    }
+    &.spa .hotel_box_header {
+      background-image: url(/images/sectors/spa.jpg);
     }
     &.private_islands .hotel_box_header {
-      background-image: url(/images/private_island.jpg);
+      background-image: url(/images/sectors/private_island.jpg);
     }
-    &.tourism .hotel_box_header {
-      background-image: url(/images/tourism.jpg);
-      background-position: 50% 80%;
+    &.golf .hotel_box_header {
+      background-image: url(/images/sectors/golf.jpg);
+    }
+    &.villas_real_estate .hotel_box_header {
+      background-image: url(/images/sectors/villa.jpg);
     }
   }
 

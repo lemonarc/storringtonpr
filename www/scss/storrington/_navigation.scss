@@ -6,7 +6,7 @@ nav {
   border-bottom: 1px solid #fff;
   @include transition(background-color 0.25s, border-bottom-color 0.25s, height 0.5s);
   overflow: hidden;
-  margin-top: ($navigation-height * -1);
+  top: 0;
 
   &.solid {
     background-color: rgba(255, 255, 255, 1);
