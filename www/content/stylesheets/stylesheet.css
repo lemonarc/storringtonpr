@@ -181,7 +181,7 @@ nav {
 footer {
   background-color: #522576;
   color: white;
-  padding: 50px;
+  padding: 50px 50px 0;
   font-size: 1.1rem; }
   footer .inner_footer {
     max-width: 75rem;
@@ -252,18 +252,23 @@ footer {
       footer .contact_information {
         width: 100%;
         text-align: center; } }
+  footer .legal {
+    font-size: 0.7em;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 0; }
 
 @keyframes slide {
   0%, 100% {
     opacity: 0; }
 
-  2% {
+  1% {
     opacity: 1; }
 
   25% {
     opacity: 1; }
 
-  27% {
+  26% {
     opacity: 0; } }
 
 @keyframes testimonial {
@@ -362,25 +367,45 @@ footer {
         margin-top: 0.5em;
         font-size: 0.6em; }
     .hero_splash .hero_slide.slide_1 {
-      background-image: url(/images/residence_on_the_rocks/pool_deck.jpg);
-      -webkit-animation: slide 40s linear 0.5s infinite;
-      -moz-animation: slide 40s linear 0.5s infinite;
-      animation: slide 40s linear 0.5s infinite; }
+      background-image: url(/images/home_heros/residence_pool.jpg);
+      -webkit-animation: slide 80s linear 0.5s infinite;
+      -moz-animation: slide 80s linear 0.5s infinite;
+      animation: slide 80s linear 0.5s infinite; }
     .hero_splash .hero_slide.slide_2 {
-      background-image: url(/images/the_singular/rooftop_bar.jpg);
-      -webkit-animation: slide 40s linear 10s infinite;
-      -moz-animation: slide 40s linear 10s infinite;
-      animation: slide 40s linear 10s infinite; }
+      background-image: url(/images/home_heros/pool_dining.jpg);
+      -webkit-animation: slide 80s linear 10s infinite;
+      -moz-animation: slide 80s linear 10s infinite;
+      animation: slide 80s linear 10s infinite; }
     .hero_splash .hero_slide.slide_3 {
-      background-image: url(/images/crown_and_garter/room_1_straight.jpg);
-      -webkit-animation: slide 40s linear 20s infinite;
-      -moz-animation: slide 40s linear 20s infinite;
-      animation: slide 40s linear 20s infinite; }
+      background-image: url(/images/home_heros/room_1_straight.jpg);
+      -webkit-animation: slide 80s linear 20s infinite;
+      -moz-animation: slide 80s linear 20s infinite;
+      animation: slide 80s linear 20s infinite; }
     .hero_splash .hero_slide.slide_4 {
-      background-image: url(/images/restaurant/group_tables.jpg);
-      -webkit-animation: slide 40s linear 30s infinite;
-      -moz-animation: slide 40s linear 30s infinite;
-      animation: slide 40s linear 30s infinite; }
+      background-image: url(/images/home_heros/royal_evian.jpg);
+      -webkit-animation: slide 80s linear 30s infinite;
+      -moz-animation: slide 80s linear 30s infinite;
+      animation: slide 80s linear 30s infinite; }
+    .hero_splash .hero_slide.slide_5 {
+      background-image: url(/images/home_heros/singular_room_view.jpg);
+      -webkit-animation: slide 80s linear 40s infinite;
+      -moz-animation: slide 80s linear 40s infinite;
+      animation: slide 80s linear 40s infinite; }
+    .hero_splash .hero_slide.slide_6 {
+      background-image: url(/images/home_heros/beach_dinner.jpg);
+      -webkit-animation: slide 80s linear 50s infinite;
+      -moz-animation: slide 80s linear 50s infinite;
+      animation: slide 80s linear 50s infinite; }
+    .hero_splash .hero_slide.slide_7 {
+      background-image: url(/images/home_heros/rooftop_bar.jpg);
+      -webkit-animation: slide 80s linear 60s infinite;
+      -moz-animation: slide 80s linear 60s infinite;
+      animation: slide 80s linear 60s infinite; }
+    .hero_splash .hero_slide.slide_8 {
+      background-image: url(/images/home_heros/singular_spa.jpg);
+      -webkit-animation: slide 80s linear 70s infinite;
+      -moz-animation: slide 80s linear 70s infinite;
+      animation: slide 80s linear 70s infinite; }
 
 .splash_divider {
   height: 105px;
@@ -635,18 +660,18 @@ footer {
 div.sectors_navigation {
   position: fixed;
   z-index: 30;
-  border-bottom: 1px solid #fff;
-  -webkit-transition: height 1s;
-  -moz-transition: height 1s;
-  transition: height 1s;
+  border-bottom: 1px solid #ddd;
+  -webkit-transition: height 1s, border-bottom-color 1s;
+  -moz-transition: height 1s, border-bottom-color 1s;
+  transition: height 1s, border-bottom-color 1s;
   overflow: auto;
   top: 0;
   background-color: white;
-  border-bottom-color: #ddd;
   width: 100vw;
   height: 105px; }
   div.sectors_navigation.hidden {
-    height: 0; }
+    height: 0;
+    border-bottom-color: #fff; }
   div.sectors_navigation .navigation_inner {
     max-width: 75rem;
     margin-left: auto;
@@ -663,22 +688,34 @@ div.sectors_navigation {
     display: block;
     margin-right: 2.3576515979%;
     width: 14.7019570017%;
+    padding: 10px;
+    font-size: 1.2em;
+    text-shadow: 0px 0px 5px #000;
+    font-family: crete-round;
     height: 100%;
-    background-size: cover; }
+    background-size: cover;
+    cursor: pointer;
+    color: white; }
     div.sectors_navigation .sectors_navigation_image:last-child {
       margin-right: 0; }
   div.sectors_navigation #sn_restaurants {
-    background-image: url(/images/sectors/thumbnails/restaurant.jpg); }
+    background-image: url(/images/sectors/thumbnails/restaurant.jpg);
+    background-position: 50% 90%; }
   div.sectors_navigation #sn_hotels {
-    background-image: url(/images/sectors/thumbnails/hotel.jpg); }
+    background-image: url(/images/sectors/thumbnails/hotel.jpg);
+    background-position: 50% 90%; }
   div.sectors_navigation #sn_spa {
-    background-image: url(/images/sectors/thumbnails/spa.jpg); }
+    background-image: url(/images/sectors/thumbnails/spa.jpg);
+    background-position: 50% 60%; }
   div.sectors_navigation #sn_private_islands {
-    background-image: url(/images/sectors/thumbnails/private_island.jpg); }
+    background-image: url(/images/sectors/thumbnails/private_island.jpg);
+    background-position: 50% 90%; }
   div.sectors_navigation #sn_golf {
-    background-image: url(/images/sectors/thumbnails/golf.jpg); }
+    background-image: url(/images/sectors/thumbnails/golf.jpg);
+    background-position: 50% 90%; }
   div.sectors_navigation #sn_villas {
-    background-image: url(/images/sectors/thumbnails/villa.jpg); }
+    background-image: url(/images/sectors/thumbnails/villa.jpg);
+    background-position: 50% 90%; }
 
 .clients_container {
   max-width: 75rem;
@@ -790,3 +827,134 @@ div.sectors_navigation {
 
 .team_box:nth-last-of-type(2) {
   margin-right: 0; }
+
+.client_testimonials {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto; }
+  .client_testimonials::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .client_testimonials .client_testimonial_logo {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%;
+    line-height: 200px; }
+    .client_testimonials .client_testimonial_logo:last-child {
+      margin-right: 0; }
+    .client_testimonials .client_testimonial_logo img {
+      vertical-align: middle;
+      width: 100%; }
+
+.media_testimonial {
+  overflow: hidden;
+  width: 100%; }
+  .media_testimonial .testimonial_inner {
+    clear: both;
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.5rem 0;
+    font-size: 1.3em;
+    position: relative; }
+    .media_testimonial .testimonial_inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .media_testimonial .testimonial_inner:after {
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      content: " ";
+      clear: both;
+      height: 0; }
+    .media_testimonial .testimonial_inner blockquote {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 74.4105871005%;
+      padding: 0 1.5rem;
+      margin: 0; }
+      .media_testimonial .testimonial_inner blockquote:last-child {
+        margin-right: 0; }
+    .media_testimonial .testimonial_inner img {
+      display: block;
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 23.2317613015%;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%); }
+      .media_testimonial .testimonial_inner img:last-child {
+        margin-right: 0; }
+  .media_testimonial:nth-child(odd) {
+    text-align: right; }
+    .media_testimonial:nth-child(odd) blockquote {
+      margin-left: 25.5894128995%;
+      margin-right: 0; }
+  .media_testimonial:nth-child(even) img {
+    margin-right: 0;
+    right: 0; }
+  .media_testimonial:first-child .testimonial_inner {
+    padding-top: 0; }
+  .media_testimonial.media_gq {
+    background-color: #191d22;
+    color: white; }
+  .media_testimonial.media_good_housekeeping {
+    background-color: #00aac9;
+    color: white; }
+  .media_testimonial.media_nina {
+    background-color: #d8c8b3;
+    color: white; }
+  .media_testimonial.media_tamzin {
+    background-color: #eff2f7; }
+
+.contact_header_image {
+  width: 100%;
+  background-image: url(/images/contact_us.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 250px; }
+
+.contact_main {
+  font-size: 1.2em;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 5rem; }
+  .contact_main::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .contact_main .emails {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%; }
+    .contact_main .emails:last-child {
+      margin-right: 0; }
+  .contact_main .phone_numbers {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%; }
+    .contact_main .phone_numbers:last-child {
+      margin-right: 0; }
+  .contact_main .address_information {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%; }
+    .contact_main .address_information:last-child {
+      margin-right: 0; }
+  .contact_main h3 {
+    font-size: 1.3em;
+    text-align: center; }

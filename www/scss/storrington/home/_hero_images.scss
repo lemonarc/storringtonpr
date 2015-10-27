@@ -2,13 +2,13 @@
   0%, 100% {
     opacity: 0;
   }
-  2% {
+  1% {
     opacity: 1;
   }
   25% {
     opacity: 1;
   }
-  27% {
+  26% {
     opacity: 0;
   }
 }
@@ -96,20 +96,36 @@
     }
 
     &.slide_1 {
-      background-image: url(/images/residence_on_the_rocks/pool_deck.jpg);
-      @include animation(slide 40s linear 0.5s infinite);
+      background-image: url(/images/home_heros/residence_pool.jpg);
+      @include animation(slide 80s linear 0.5s infinite);
     }
     &.slide_2 {
-      background-image: url(/images/the_singular/rooftop_bar.jpg);
-      @include animation(slide 40s linear 10s infinite);
+      background-image: url(/images/home_heros/pool_dining.jpg);
+      @include animation(slide 80s linear 10s infinite);
     }
     &.slide_3 {
-      background-image: url(/images/crown_and_garter/room_1_straight.jpg);
-      @include animation(slide 40s linear 20s infinite);
+      background-image: url(/images/home_heros/room_1_straight.jpg);
+      @include animation(slide 80s linear 20s infinite);
     }
     &.slide_4 {
-      background-image: url(/images/restaurant/group_tables.jpg);
-      @include animation(slide 40s linear 30s infinite);
+      background-image: url(/images/home_heros/royal_evian.jpg);
+      @include animation(slide 80s linear 30s infinite);
+    }
+    &.slide_5 {
+      background-image: url(/images/home_heros/singular_room_view.jpg);
+      @include animation(slide 80s linear 40s infinite);
+    }
+    &.slide_6 {
+      background-image: url(/images/home_heros/beach_dinner.jpg);
+      @include animation(slide 80s linear 50s infinite);
+    }
+    &.slide_7 {
+      background-image: url(/images/home_heros/rooftop_bar.jpg);
+      @include animation(slide 80s linear 60s infinite);
+    }
+    &.slide_8 {
+      background-image: url(/images/home_heros/singular_spa.jpg);
+      @include animation(slide 80s linear 70s infinite);
     }
   }
 }

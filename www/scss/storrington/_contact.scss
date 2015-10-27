@@ -1,0 +1,29 @@
+.contact_header_image {
+  width: 100%;
+  background-image: url(/images/contact_us.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 250px;
+}
+.contact_main {
+  font-size: 1.2em;
+  @include outer-container();
+  text-align: center;
+
+  .emails {
+    @include span-columns(4);
+  }
+  .phone_numbers {
+    @include span-columns(4);
+  }
+  .address_information {
+    @include span-columns(4);
+
+  }
+
+  h3 {
+    font-size: 1.3em;
+    text-align: center;
+  }
+  margin-bottom: 5rem;
+}
