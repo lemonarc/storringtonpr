@@ -17,6 +17,10 @@
     }
   }
 
+  h3 {
+    text-align: center;
+  }
+
   .client_testimonial_text {
     @include shift(1);
     @include span-columns(10);

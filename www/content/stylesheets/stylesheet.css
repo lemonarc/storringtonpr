@@ -851,6 +851,8 @@ div.sectors_navigation {
       width: 100%; }
     .client_testimonials .client_testimonial_logo:nth-child(3) {
       margin-right: 0; }
+  .client_testimonials h3 {
+    text-align: center; }
   .client_testimonials .client_testimonial_text {
     margin-left: 8.5298042998%;
     float: left;
