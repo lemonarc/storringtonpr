@@ -1,14 +1,19 @@
 .our-approach-main {
   @include outer-container();
+  @include pad(0 20px);
   position: relative;
   font-size: 1.2em;
+}
+.team_section {
+  overflow: auto;
+  z-index: 5;
 }
 .team_bio {
 
   @include transition(max-height 1.5s);
 
   position: absolute;
-  width: 100%;
+  width: calc(100% - 40px);
   z-index: 5;
   max-height: 0px;
   overflow: hidden;
@@ -16,6 +21,7 @@
   &:before{
     content: "";
     display: block;
+    min-height: 109px;
     padding-top: 18.05%; 	/* initial ratio of 1:1*/
   }
 
@@ -27,6 +33,9 @@
 
 }
 
+.team_container {
+  min-width: 600px;
+}
 .team_box {
   @include span-columns(2.4);
   @include transition(opacity 1s);
@@ -58,7 +67,9 @@
       max-height: 1000px;
     }
   }
-}
-.team_box:nth-last-of-type(2) {
-  @include omega();
+
+  &:nth-last-of-type(2) {
+    @include omega();
+  }
+
 }

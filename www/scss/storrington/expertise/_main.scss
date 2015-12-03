@@ -60,6 +60,12 @@ $expertise-height: 400px;
       vertical-align: middle;
       position: relative;
       top: -0.5em;
+
+      @include media($mobile) {
+        padding-top: 18rem;
+        line-height: 1em;
+      }
+
     }
   }
 }

@@ -1,5 +1,6 @@
 .client_testimonials {
   @include outer-container();
+  @include pad(0 20px);
 
   .client_testimonial_logo {
     @include span-columns(4);
@@ -7,6 +8,7 @@
     cursor: pointer;
 
     line-height: 200px;
+
     img {
       vertical-align: middle;
       width: 100%;
@@ -15,6 +17,22 @@
     &:nth-child(3) {
       @include omega();
     }
+
+    @include media($mobile) {
+      @include fill-parent();
+      max-height: 100px;
+      line-height: 100px;
+      position: relative;
+      text-align: center;
+
+      img {
+        vertical-align: middle;
+        max-height: 100%;
+        width: auto;
+        margin: auto;
+      }
+    }
+
   }
 
   h3 {
@@ -42,6 +60,17 @@
 
     blockquote {
       margin: 1rem;
+    }
+
+    @include media($mobile) {
+      @include shift(0);
+      @include fill-parent();
+
+      &.expand {
+        opacity: 1;
+        max-height: 2000px;
+      }
+
     }
   }
 }
@@ -120,6 +149,36 @@
 
   &.media_tamzin {
     background-color: #eff2f7;
+  }
+
+  @include media($mobile) {
+    .testimonial_inner {
+
+      @include pad(2.5rem 0 0);
+
+      blockquote {
+        @include shift(0);
+        @include fill-parent();
+      }
+
+      img {
+        float: none;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        @include shift(0);
+        @include pad(0);
+        text-align: center;
+        position: static;
+        @include transform(none);
+        max-width: 250px;
+        padding: 40px 0;
+      }
+      &.media_lisa, &.media_tamzin, &.media_nina {
+        img {
+          padding: 0;
+        }
+      }
+    }
   }
 
 }

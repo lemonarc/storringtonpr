@@ -10,15 +10,14 @@
   @include outer-container();
   text-align: center;
 
-  .emails {
+  .emails, .phone_numbers, .address_information {
     @include span-columns(4);
   }
-  .phone_numbers {
-    @include span-columns(4);
-  }
-  .address_information {
-    @include span-columns(4);
 
+  @include media($mobile) {
+    .emails, .phone_numbers, .address_information {
+      @include fill-parent();
+    }
   }
 
   h3 {

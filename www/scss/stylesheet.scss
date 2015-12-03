@@ -1,3 +1,7 @@
+/* COLOURS */
+$brand-primary: #8446ad;
+$brand-secondary: #522576;
+
 /* IMPORT FONTS */
 @import url(https://fonts.googleapis.com/css?family=Khula:300);
 @import url(https://fonts.googleapis.com/css?family=Raleway:200);
@@ -18,6 +22,9 @@ $mobile: new-breakpoint(max-width 880px);
 $smaller-mobile: new-breakpoint(max-width 500px);
 $default-feature: max-width !global;
 
+/* IMPORT BITTERS */
+@import "bitters/base";
+
 /* IMPORT STORRINGTON STYLESHEETS */
 @import "storrington/global";
 @import "storrington/navigation";
@@ -28,3 +35,4 @@ $default-feature: max-width !global;
 @import "storrington/our-team";
 @import "storrington/testimonials";
 @import "storrington/contact";
+@import "storrington/rotr";
