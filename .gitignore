@@ -2,3 +2,4 @@ node_modules
 www/output
 www/tmp
 www/crash.log
+www/content/stylesheets/stylesheet.css
