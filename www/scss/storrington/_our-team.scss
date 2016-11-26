@@ -4,25 +4,26 @@
   position: relative;
   font-size: 1.2em;
 }
+
 .team_section {
   overflow: auto;
   z-index: 5;
 }
-.team_bio {
 
+.team_bio {
   @include transition(max-height 1.5s);
 
   position: absolute;
   width: calc(100% - 40px);
   z-index: 5;
-  max-height: 0px;
+  max-height: 0;
   overflow: hidden;
 
   &:before{
     content: "";
     display: block;
-    min-height: 109px;
-    padding-top: 18.05%; 	/* initial ratio of 1:1*/
+    min-height: 139px;
+    padding-top: 23.2%;
   }
 
   div {
@@ -36,8 +37,9 @@
 .team_container {
   min-width: 600px;
 }
+
 .team_box {
-  @include span-columns(2.4);
+  @include span-columns(3);
   @include transition(opacity 1s);
   position: relative;
   z-index: 10;
@@ -46,6 +48,7 @@
   img {
     width: 100%;
   }
+
   h4 {
     @include transition(opacity 1s);
     text-align: center;
@@ -63,13 +66,13 @@
     h4 {
       opacity: 0;
     }
+
     &+.team_bio {
-      max-height: 1000px;
+      max-height: 2000px;
     }
   }
 
   &:nth-last-of-type(2) {
     @include omega();
   }
-
 }

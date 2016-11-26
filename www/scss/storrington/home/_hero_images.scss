@@ -61,6 +61,12 @@
       text-shadow: 0 0 7px #000;
       text-align: center;
 
+      .hero_information {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+      }
+
       blockquote, cite {
         transform-style: preserve-3d;
         -webkit-backface-visibility: hidden;
@@ -100,11 +106,11 @@
       @include animation(slide 80s linear 0.5s infinite);
     }
     &.slide_2 {
-      background-image: url(/images/home_heros/pool_dining.jpg);
+      background-image: url(/images/home_heros/dolphin_bay.jpg);
       @include animation(slide 80s linear 10s infinite);
     }
     &.slide_3 {
-      background-image: url(/images/home_heros/room_1_straight.jpg);
+      background-image: url(/images/home_heros/breezes_beach_club_spa_zanzibar.jpg);
       @include animation(slide 80s linear 20s infinite);
     }
     &.slide_4 {
