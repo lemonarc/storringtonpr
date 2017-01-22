@@ -102,36 +102,40 @@
     }
 
     &.slide_1 {
-      background-image: url(/images/home_heros/residence_pool.jpg);
-      @include animation(slide 80s linear 0.5s infinite);
+      background-image: url(/images/home_heros/frangipani_spa.jpg);
+      @include animation(slide 90s linear 0.5s infinite);
     }
     &.slide_2 {
-      background-image: url(/images/home_heros/dolphin_bay.jpg);
-      @include animation(slide 80s linear 10s infinite);
+      background-image: url(/images/home_heros/alphonse_island.jpg);
+      @include animation(slide 90s linear 10s infinite);
     }
     &.slide_3 {
       background-image: url(/images/home_heros/breezes_beach_club_spa_zanzibar.jpg);
-      @include animation(slide 80s linear 20s infinite);
+      @include animation(slide 90s linear 20s infinite);
     }
     &.slide_4 {
-      background-image: url(/images/home_heros/royal_evian.jpg);
-      @include animation(slide 80s linear 30s infinite);
+      background-image: url(/images/home_heros/the_palms_zanzibar.jpg);
+      @include animation(slide 90s linear 30s infinite);
     }
     &.slide_5 {
-      background-image: url(/images/home_heros/singular_room_view.jpg);
-      @include animation(slide 80s linear 40s infinite);
+      background-image: url(/images/home_heros/dolphin_bay.jpg);
+      @include animation(slide 90s linear 40s infinite);
     }
     &.slide_6 {
-      background-image: url(/images/home_heros/beach_dinner.jpg);
-      @include animation(slide 80s linear 50s infinite);
+      background-image: url(/images/home_heros/eden_bleu.jpg);
+      @include animation(slide 90s linear 50s infinite);
     }
     &.slide_7 {
-      background-image: url(/images/home_heros/rooftop_bar.jpg);
-      @include animation(slide 80s linear 60s infinite);
+      background-image: url(/images/home_heros/flats_lunch_alphonse.jpg);
+      @include animation(slide 90s linear 60s infinite);
     }
     &.slide_8 {
-      background-image: url(/images/home_heros/singular_spa.jpg);
-      @include animation(slide 80s linear 70s infinite);
+      background-image: url(/images/home_heros/baraza_resort.jpg);
+      @include animation(slide 90s linear 70s infinite);
+    }
+    &.slide_9 {
+      background-image: url(/images/home_heros/zawadi_hotel.jpg);
+      @include animation(slide 90s linear 80s infinite);
     }
   }
 }
