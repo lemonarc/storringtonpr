@@ -1,5 +1,5 @@
 .clients_container {
-  @include outer-container();
+  @include outer-container(95%);
 
   a {
     display: block;
@@ -30,16 +30,60 @@
     .client_hero {
       float: left;
       width: 55%;
-      max-height: 100%;
+      height: 100%;
       display: inline-block;
       vertical-align: middle;
+      background-size: cover;
+
+      &.dolphin_bay {
+        background-image: url(/images/home_heros/dolphin_bay.jpg);
+      }
+
+      &.eden_bleu {
+        background-image: url(/images/home_heros/eden_bleu.jpg);
+      }
+
+      &.the_palms_zanzibar {
+        background-image: url(/images/home_heros/the_palms_zanzibar.jpg);
+      }
+
+      &.baraza_resort {
+        background-image: url(/images/home_heros/baraza_resort.jpg);
+      }
+
+      &.tongsai_bay {
+        background-image: url(/images/home_heros/tongsai_bay.jpg);
+      }
+
+      &.zanzibar_collection {
+        background-image: url(/images/home_heros/zanzibar_collection.jpg);
+      }
+
+      &.breezes_zanzibar {
+        background-image: url(/images/home_heros/breezes_beach_club_spa_zanzibar.jpg);
+      }
+
+      &.zawadi_zanzibar {
+        background-image: url(/images/home_heros/zawadi_hotel.jpg);
+      }
+
+      &.alphonse_island {
+        background-image: url(/images/home_heros/alphonse_island_aerial.jpg);
+      }
+
+      &.residence_on_the_rocks {
+        background-image: url(/images/home_heros/residence_on_the_rocks.jpg);
+
+        & + img {
+          width: 15%;
+        }
+      }
     }
 
     .client_logo {
       max-height: 92%;
       margin: 2%;
     }
-
   }
 
   margin-bottom: 5rem;
