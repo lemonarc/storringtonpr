@@ -1,0 +1,26 @@
+.partners_container {
+  @include outer-container(95%);
+
+  .partner {
+    @include media($larger-than-mobile) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    @include media($smaller-mobile) {
+      @include fill-parent;
+      @include omega();
+    }
+  }
+}
+
+.partner {
+  &_header {
+    text-align: center;
+  }
+  &_logo {
+    max-width: 300px;
+    border: 1px solid lighten($brand-primary, 45%);
+    padding: 5px;
+  }
+}
