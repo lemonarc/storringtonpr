@@ -1,0 +1,90 @@
+.clients_container {
+  @include outer-container(95%);
+
+  a {
+    display: block;
+    border: 1px solid lighten($brand-primary, 45%);
+
+    @include media($larger-than-mobile) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    @include media($smaller-mobile) {
+      @include fill-parent;
+      @include omega();
+    }
+
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+
+    .client_hero, .client_logo {
+      width: 30%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .client_hero {
+      float: left;
+      width: 55%;
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+      background-size: cover;
+
+      &.dolphin_bay {
+        background-image: url(../images/home_heros/dolphin_bay.jpg);
+      }
+
+      &.eden_bleu {
+        background-image: url(../images/home_heros/eden_bleu.jpg);
+      }
+
+      &.the_palms_zanzibar {
+        background-image: url(../images/home_heros/the_palms_zanzibar.jpg);
+      }
+
+      &.baraza_resort {
+        background-image: url(../images/home_heros/baraza_resort.jpg);
+      }
+
+      &.tongsai_bay {
+        background-image: url(../images/home_heros/tongsai_bay.jpg);
+      }
+
+      &.zanzibar_collection {
+        background-image: url(../images/home_heros/zanzibar_collection.jpg);
+      }
+
+      &.breezes_zanzibar {
+        background-image: url(../images/home_heros/breezes_beach_club_spa_zanzibar.jpg);
+      }
+
+      &.zawadi_zanzibar {
+        background-image: url(../images/home_heros/zawadi_hotel.jpg);
+      }
+
+      &.alphonse_island {
+        background-image: url(../images/home_heros/alphonse_island_aerial.jpg);
+      }
+
+      &.residence_on_the_rocks {
+        background-image: url(../images/home_heros/residence_on_the_rocks.jpg);
+
+        & + img {
+          width: 15%;
+        }
+      }
+    }
+
+    .client_logo {
+      max-height: 92%;
+      margin: 2%;
+    }
+  }
+
+  margin-bottom: 5rem;
+}

@@ -1,0 +1,38 @@
+/* COLOURS */
+$brand-primary: #8446ad;
+$brand-secondary: #522576;
+
+/* IMPORT FONTS */
+@import url(https://fonts.googleapis.com/css?family=Khula:300);
+@import url(https://fonts.googleapis.com/css?family=Raleway:200);
+
+/* IMPORT BOURBON */
+@import "bourbon/bourbon";
+
+//$visual-grid: true !global;
+$max-width: rem(1200) !global;
+
+/* IMPORT NEAT */
+@import "neat/neat";
+
+/* NEAT VARIABLES */
+$soft-shrink: new-breakpoint(max-width 1024px);
+$larger-than-mobile: new-breakpoint(min-width 880px);
+$mobile: new-breakpoint(max-width 880px);
+$smaller-mobile: new-breakpoint(max-width 500px);
+$default-feature: max-width !global;
+
+/* IMPORT BITTERS */
+@import "bitters/base";
+
+/* IMPORT STORRINGTON STYLESHEETS */
+@import "storrington/global";
+@import "storrington/navigation";
+@import "storrington/footer";
+@import "storrington/home";
+@import "storrington/expertise";
+@import "storrington/clients";
+@import "storrington/our-team";
+@import "storrington/testimonials";
+@import "storrington/contact";
+@import "storrington/rotr";

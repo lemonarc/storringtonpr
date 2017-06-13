@@ -1,0 +1,53 @@
+$navigation-height: 105px;
+
+html, body {
+  margin: 0;
+  font-family: Khula;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: $brand-secondary;
+}
+
+body {
+  padding-top: $navigation-height;
+  &.no_scroll {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+a {
+  &,
+  &:active,
+  &:hover,
+  &:visited {
+    color: inherit;
+  }
+
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-family: crete-round;
+  font-weight: lighter;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-weight: lighter;
+}
+
+.page_header {
+  @include outer-container();
+  @include pad(0 20px 0.5em);
+
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid $brand-primary;
+}

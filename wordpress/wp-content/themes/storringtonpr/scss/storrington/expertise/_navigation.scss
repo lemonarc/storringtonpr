@@ -1,0 +1,68 @@
+div.sectors_navigation {
+  position: fixed;
+  z-index: 30;
+  border-bottom: 1px solid #ddd;
+  @include transition(height 1s, border-bottom-color 1s);
+  overflow: auto;
+  top: 0;
+  background-color: rgba(255, 255, 255, 1);
+
+  &.hidden {
+    height: 0;
+    border-bottom-color: #fff;
+  }
+
+  width: 100vw;
+  height: $navigation-height;
+
+  .navigation_inner {
+    @include outer-container();
+    padding: 1rem 0;
+    height: 100%;
+    min-width: 880px;
+  }
+
+  .sectors_navigation_image {
+    @include span-columns(2);
+    @include pad(10px);
+
+    font-size: 1.2em;
+    text-shadow: 0px 0px 5px #000;
+    font-family: crete-round;
+    height: 100%;
+    background-size: cover;
+    cursor: pointer;
+
+    color: white;
+  }
+
+  #sn_restaurants {
+    background-image: url(../images/sectors/thumbnails/restaurant.jpg);
+    background-position: 50% 90%;
+  }
+  #sn_hotels {
+    background-image: url(../images/sectors/thumbnails/hotel.jpg);
+    background-position: 50% 90%;
+  }
+  #sn_spa {
+    background-image: url(../images/sectors/thumbnails/spa.jpg);
+    background-position: 50% 60%;
+  }
+  #sn_private_islands {
+    background-image: url(../images/sectors/thumbnails/private_island.jpg);
+    background-position: 50% 90%;
+  }
+  #sn_golf {
+    background-image: url(../images/sectors/thumbnails/golf.jpg);
+    background-position: 50% 90%;
+  }
+  #sn_villas {
+    background-image: url(../images/sectors/thumbnails/villa.jpg);
+    background-position: 50% 90%;
+  }
+
+  @include media($mobile) {
+
+  }
+
+}

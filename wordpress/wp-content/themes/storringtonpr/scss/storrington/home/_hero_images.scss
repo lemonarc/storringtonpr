@@ -1,0 +1,168 @@
+@keyframes slide {
+  0%, 100% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  11% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0;
+  }
+}
+@keyframes testimonial {
+  0%, 2% {
+    @include transform(translateX(-200%) translateY(-50%));
+  }
+  9% {
+    @include transform(translateX(-5%) translateY(-50%));
+  }
+  10% {
+    @include transform(translateX(-1%) translateY(-50%));
+  }
+  96% {
+    @include transform(translateX(1%) translateY(-50%));
+  }
+  97% {
+    @include transform(translateX(5%) translateY(-50%));
+  }
+  100% {
+    @include transform(translateX(200%) translateY(-50%));
+  }
+}
+
+.hero_splash {
+  width: 100vw;
+  max-width: $max-width;
+  height: calc(100vh - (#{$navigation-height} * 2));
+  max-height: 50vw;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+  .hero_slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    opacity: 0;
+
+    .testimonial {
+      width: 100%;
+      height: 100%;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.35);
+      margin: 0;
+      text-shadow: 0 0 7px #000;
+      text-align: center;
+
+      .hero_information {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+      }
+
+      blockquote, cite {
+        transform-style: preserve-3d;
+        -webkit-backface-visibility: hidden;
+        -webkit-font-smoothing: subpixel-antialiased;
+        display: block;
+        margin: 0;
+        position: relative;
+        top: 50%;
+      }
+
+      blockquote {
+        z-index: 1;
+        padding: 1rem;
+        @include animation(testimonial 10s linear infinite);
+        font-size: 3rem;
+        line-height: 3rem;
+
+        @include media($mobile) {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+        @include media ($smaller-mobile) {
+          font-size: 1.3rem;
+          line-height: 1.3rem;
+        }
+      }
+
+      cite {
+        margin-top: 0.5em;
+        font-size: 0.6em;
+      }
+
+    }
+
+    &.slide_1 {
+      background-image: url(../images/home_heros/frangipani_spa.jpg);
+      @include animation(slide 90s linear 0.5s infinite);
+    }
+    &.slide_2 {
+      background-image: url(../images/home_heros/alphonse_island.jpg);
+      @include animation(slide 90s linear 10s infinite);
+    }
+    &.slide_3 {
+      background-image: url(../images/home_heros/breezes_beach_club_spa_zanzibar.jpg);
+      @include animation(slide 90s linear 20s infinite);
+    }
+    &.slide_4 {
+      background-image: url(../images/home_heros/the_palms_zanzibar.jpg);
+      @include animation(slide 90s linear 30s infinite);
+    }
+    &.slide_5 {
+      background-image: url(../images/home_heros/dolphin_bay.jpg);
+      @include animation(slide 90s linear 40s infinite);
+    }
+    &.slide_6 {
+      background-image: url(../images/home_heros/eden_bleu.jpg);
+      @include animation(slide 90s linear 50s infinite);
+    }
+    &.slide_7 {
+      background-image: url(../images/home_heros/flats_lunch_alphonse.jpg);
+      @include animation(slide 90s linear 60s infinite);
+    }
+    &.slide_8 {
+      background-image: url(../images/home_heros/baraza_resort.jpg);
+      @include animation(slide 90s linear 70s infinite);
+    }
+    &.slide_9 {
+      background-image: url(../images/home_heros/zawadi_hotel.jpg);
+      @include animation(slide 90s linear 80s infinite);
+    }
+  }
+}
+
+.splash_divider {
+  height: $navigation-height;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+
+  p {
+    margin: 1.1rem 0 0;
+    line-height: 2.4rem;
+  }
+
+  img {
+    height: 1.5rem;
+  }
+
+  @include transition(opacity 0.5s);
+
+  &.hidden {
+    opacity: 0;
+    cursor: inherit;
+  }
+
+  @include media($max-width) {
+    display: none;
+  }
+}

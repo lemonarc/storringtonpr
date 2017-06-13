@@ -1,0 +1,117 @@
+.testimonial_separator {
+  background-color: $brand-primary;
+  text-align: center;
+  @include pad(20px 0);
+
+  font-size: 1.5rem;
+
+  .testimonial_blurb {
+    color: white;
+
+    h2, h3 {
+      margin: 0.5rem;
+    }
+  }
+
+  @include media($mobile) {
+    @include pad(20px);
+    font-size: 1.1rem;
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
+
+.testimonials {
+  .testimonial_inner {
+    @include outer-container();
+    @include pad(30px 0);
+    position: relative;
+
+    .testimonial_logo {
+      @include shift(7);
+      @include span-columns(5);
+      @include pad(0 20px);
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+      text-align: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .testimonial_quote {
+      @include span-columns(7);
+
+      blockquote {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .testimonial:nth-child(odd) {
+    text-align: right;
+
+    .testimonial_logo {
+      @include shift(0);
+    }
+    .testimonial_quote {
+      @include shift(5);
+    }
+  }
+
+  .testimonial.evian_resort {
+    cite {
+      color: lighten(desaturate($brand-secondary, 40%), 30%);
+    }
+  }
+
+  .testimonial.crown_and_garter {
+    background-color: #95d4cb;
+    color: #181d21;
+    cite {
+      color: lighten(desaturate(#181d21, 20%), 30%);
+    }
+  }
+
+  .testimonial.desroches_island {
+    cite {
+      color: lighten(desaturate($brand-secondary, 40%), 30%);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  @include media($mobile) {
+
+    .testimonial,
+    .testimonial:nth-child(odd) {
+
+      text-align: center;
+
+      .testimonial_quote {
+        @include fill-parent();
+        @include shift(0);
+
+        blockquote {
+          font-size: 1.1rem;
+        }
+
+      }
+      .testimonial_logo {
+        @include shift(2);
+        @include span-columns(8);
+        position: static;
+        @include transform(none);
+      }
+
+    }
+
+  }
+
+}

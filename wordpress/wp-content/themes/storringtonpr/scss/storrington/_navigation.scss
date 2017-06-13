@@ -1,0 +1,134 @@
+nav {
+  position: fixed;
+  z-index: 20;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+  border-bottom: 1px solid #fff;
+  @include transition(background-color 0.25s, border-bottom-color 0.25s, height 0.5s);
+  overflow: hidden;
+  top: 0;
+
+  &.solid {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  &.border {
+    border-bottom-color: #ddd;
+  }
+
+  width: 100vw;
+  height: $navigation-height;
+
+  padding: 1rem 0;
+
+  $navigation_inner_height: 70px;
+  
+  .navigation_inner {
+    @include outer-container();
+    height: $navigation_inner_height;
+  }
+
+  .storrington_logo {
+    @include span-columns(4);
+    @include pad(0 20px);
+    line-height: $navigation_inner_height;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+      position: relative;
+      top: 3px;
+      vertical-align: middle;
+    }
+  }
+
+  .navigation_hamburger {
+      display: none;
+      position: relative;
+      top: 25px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .bun {
+        float: right;
+        clear: right;
+        background-color: $brand-secondary;
+        height: 2px;
+        margin: 3px 5px;
+        width: 23px;
+        @include transition(transform 100ms, opacity 100ms, width 100ms);
+        transform-origin: 100% 45%;
+      }
+
+      &.menu_open{
+        .bun.top {
+          transform: rotate(-45deg);
+        }
+        .bun.mid {
+          opacity: 0;
+        }
+        .bun.bottom {
+          transform: rotate(45deg);
+        }
+      }
+  }
+  .navigation_links {
+    @include span-columns(8);
+    @include pad(0 20px);
+
+    line-height: $navigation_inner_height;
+    font-size: 1.4rem;
+    @include media(1024px) {
+      font-size: 1.1rem;
+    }
+    text-align: right;
+    text-transform: uppercase;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 0.6rem;
+      vertical-align: middle;
+      position: relative;
+      padding-top: 0.25em;
+    }
+  }
+
+  @include media($mobile) {
+    &.menu_open {
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 1);
+    }
+    .storrington_logo {
+      @include span-columns(8);
+    }
+    .navigation_hamburger {
+      display: block;
+      @include shift(2);
+      @include span-columns(2);
+      @include omega();
+      @include pad(0 20px);
+    }
+    .navigation_links {
+      @include fill-parent();
+      font-size: 2rem;
+      text-align: left;
+
+      a {
+        width: 100%;
+        &:hover {
+          color: $brand-primary;
+          border-bottom-color: $brand-primary;
+        }
+      }
+      li {
+        display: block;
+        border-bottom: 1px solid $brand-primary;
+      }
+    }
+  }
+
+}
