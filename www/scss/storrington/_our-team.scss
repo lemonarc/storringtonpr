@@ -5,74 +5,77 @@
   font-size: 1.2em;
 }
 
-.team_section {
-  overflow: auto;
-  z-index: 5;
-}
-
-.team_bio {
-  @include transition(max-height 1.5s);
-
-  position: absolute;
-  width: calc(100% - 40px);
-  z-index: 5;
-  max-height: 0;
-  overflow: hidden;
-
-  &:before{
-    content: "";
-    display: block;
-    min-height: 139px;
-    padding-top: 23.2%;
-  }
-
-  div {
-    background-color: $brand-primary;
-    @include pad(10px 20px);
-    color: white;
-  }
-
-}
-
-.team_container {
-  min-width: 600px;
-}
-
 .team_box {
-  @include span-columns(3);
-  @include transition(opacity 1s);
-  position: relative;
-  z-index: 10;
-  cursor: pointer;
+  clear: both;
+  margin-bottom: 3rem;
 
-  img {
-    width: 100%;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
   }
 
-  h4 {
-    @include transition(opacity 1s);
-    text-align: center;
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
     margin-top: 0;
+    font-weight: bold;
   }
 
-  &.hidden {
-    opacity: 0.25;
-    h4 {
-      opacity: 0;
+  .team_image {
+    display: block;
+    float: left;
+    width: 275px;
+    margin: 0 20px 10px 0;
+  }
+
+  &:nth-of-type(2n) {
+    text-align: right;
+
+    .team_image {
+      margin: 0 0 10px 20px;
+      float: right;
     }
   }
 
-  &.expand {
-    h4 {
-      opacity: 0;
-    }
+  .team_bio {
+    @include span-columns(10);
+    @include shift(1);
+    float: none;
+  }
 
-    &+.team_bio {
-      max-height: 2000px;
+  @include media($mobile) {
+    .team_bio {
+      @include fill-parent();
+      @include shift(0);
     }
   }
 
-  &:nth-last-of-type(2) {
-    @include omega();
+  @include media($small-mobile) {
+    .team_image {
+      margin: auto;
+      float: none;
+    }
+
+    .team_bio {
+      clear: both;
+    }
+
+    &:nth-of-type(2n) {
+      text-align: left;
+
+      .team_image {
+        margin:  auto;
+        float: none;
+      }
+    }
+  }
+
+  @include media($smaller-mobile) {
+    .team_image {
+      margin: auto;
+    }
   }
 }
