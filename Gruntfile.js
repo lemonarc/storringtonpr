@@ -6,8 +6,16 @@ module.exports = function (grunt) {
   grunt.initConfig({
     watch: {
       sass: {
-        files: ['www/**', '!www/output/**', '!www/content/stylesheets/', '!www/tmp/**', 'www/crash.log'],
-        tasks: ['webpack', 'sass', 'autoprefixer', 'shell']
+        files: ['www/scss/**'],
+        tasks: ['autoprefixer', 'sass']
+      },
+      webpack: {
+        files: ['www/js/**'],
+        tasks: ['webpack']
+      },
+      nanoc: {
+        files: ['www/content/**'],
+        tasks: ['shell']
       }
     },
     webpack: {
@@ -54,7 +62,7 @@ module.exports = function (grunt) {
 
       // Prefix all files
       multiple_files: {
-        src: 'www/scss/*.css'
+        src: 'www/scss/*.scss'
       }
     },
     browserSync: {

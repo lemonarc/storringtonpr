@@ -108,6 +108,31 @@
   }
 }
 
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 45px;
+
+  @include media($mobile) {
+    height: 35px;
+    padding: 7px 11px;
+  }
+
+  svg {
+    height: 100%;
+    fill: white;
+  }
+
+  &.previous {
+    left: 3%;
+  }
+
+  &.next {
+    right: 3%;
+  }
+}
+
 .splash_divider {
   height: $navigation-height;
   font-size: 2rem;
