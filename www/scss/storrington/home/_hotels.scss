@@ -33,7 +33,7 @@
 
   .hotel_box {
     @include span-columns(4);
-    @include omega(3n + 2);
+    @include omega(3n + 1);
 
     @include media($mobile) {
       @include fill-parent();

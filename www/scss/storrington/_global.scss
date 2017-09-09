@@ -26,6 +26,10 @@ a {
   text-decoration: none;
 }
 
+p a, h3 a {
+  text-decoration: underline;
+}
+
 h1, h2 {
   font-family: crete-round;
   font-weight: lighter;
