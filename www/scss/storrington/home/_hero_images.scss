@@ -1,38 +1,3 @@
-@keyframes slide {
-  0%, 100% {
-    opacity: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  11% {
-    opacity: 1;
-  }
-  12% {
-    opacity: 0;
-  }
-}
-@keyframes testimonial {
-  0%, 2% {
-    @include transform(translateX(-200%) translateY(-50%));
-  }
-  9% {
-    @include transform(translateX(-5%) translateY(-50%));
-  }
-  10% {
-    @include transform(translateX(-1%) translateY(-50%));
-  }
-  96% {
-    @include transform(translateX(1%) translateY(-50%));
-  }
-  97% {
-    @include transform(translateX(5%) translateY(-50%));
-  }
-  100% {
-    @include transform(translateX(200%) translateY(-50%));
-  }
-}
-
 .hero_splash {
   width: 100vw;
   max-width: $max-width;
@@ -41,101 +6,104 @@
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  outline: 0;
 
-  .hero_slide {
+  .flickity-viewport,
+  .flickity-slider,
+  .hero_slide,
+  .hero_image {
     height: 100%;
     width: 100%;
+  }
+
+  .hero_slide {
+    position: relative;
+  }
+
+  .hero_information_container {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
+    width: 100%;
+  }
+
+  .hero_information {
+    color: white;
+    margin: 0;
+    padding: 8px 3vw 2vw 3vw;
+    text-shadow: 0 0 7px #000;
+    text-align: left;
+
+    blockquote, cite {
+      transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+      -webkit-font-smoothing: subpixel-antialiased;
+      display: block;
+      margin: 0;
+    }
+
+    blockquote {
+      z-index: 1;
+      font-size: 1.5rem;
+      line-height: 2rem;
+
+      @include media($mobile) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+      @include media ($smaller-mobile) {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+      }
+    }
+
+    cite {
+      margin-top: 0.5em;
+      font-size: 1em;
+      text-align: right;
+
+      @include media ($smaller-mobile) {
+        font-size: 0.7em;
+      }
+    }
+  }
+
+  //noinspection CssOptimizeSimilarProperties
+  .hero_image {
     background-size: cover;
     background-position: 50% 50%;
-    opacity: 0;
 
-    .testimonial {
-      width: 100%;
-      height: 100%;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.35);
-      margin: 0;
-      text-shadow: 0 0 7px #000;
-      text-align: center;
-
-      .hero_information {
-        position: absolute;
-        bottom: 5%;
-        right: 5%;
-      }
-
-      blockquote, cite {
-        transform-style: preserve-3d;
-        -webkit-backface-visibility: hidden;
-        -webkit-font-smoothing: subpixel-antialiased;
-        display: block;
-        margin: 0;
-        position: relative;
-        top: 50%;
-      }
-
-      blockquote {
-        z-index: 1;
-        padding: 1rem;
-        @include animation(testimonial 10s linear infinite);
-        font-size: 3rem;
-        line-height: 3rem;
-
-        @include media($mobile) {
-          font-size: 2rem;
-          line-height: 2rem;
-        }
-        @include media ($smaller-mobile) {
-          font-size: 1.3rem;
-          line-height: 1.3rem;
-        }
-      }
-
-      cite {
-        margin-top: 0.5em;
-        font-size: 0.6em;
-      }
-
-    }
-
-    &.slide_1 {
-      background-image: url(/images/home_heros/frangipani_spa.jpg);
-      @include animation(slide 90s linear 0.5s infinite);
-    }
-    &.slide_2 {
+    &.hero_alphonse {
       background-image: url(/images/home_heros/alphonse_island.jpg);
-      @include animation(slide 90s linear 10s infinite);
     }
-    &.slide_3 {
-      background-image: url(/images/home_heros/breezes_beach_club_spa_zanzibar.jpg);
-      @include animation(slide 90s linear 20s infinite);
-    }
-    &.slide_4 {
-      background-image: url(/images/home_heros/the_palms_zanzibar.jpg);
-      @include animation(slide 90s linear 30s infinite);
-    }
-    &.slide_5 {
+    &.hero_dolphin {
       background-image: url(/images/home_heros/dolphin_bay.jpg);
-      @include animation(slide 90s linear 40s infinite);
+      background-position: 50% 65%;
     }
-    &.slide_6 {
+    &.hero_eden {
       background-image: url(/images/home_heros/eden_bleu.jpg);
-      @include animation(slide 90s linear 50s infinite);
+      background-position: 50% 25%;
     }
-    &.slide_7 {
-      background-image: url(/images/home_heros/flats_lunch_alphonse.jpg);
-      @include animation(slide 90s linear 60s infinite);
+    &.hero_tongsai {
+      background-image: url(/images/home_heros/tongsai_bay.jpg);
+      background-position: 50% 25%;
     }
-    &.slide_8 {
-      background-image: url(/images/home_heros/baraza_resort.jpg);
-      @include animation(slide 90s linear 70s infinite);
-    }
-    &.slide_9 {
+    &.hero_zawadi {
       background-image: url(/images/home_heros/zawadi_hotel.jpg);
-      @include animation(slide 90s linear 80s infinite);
+      background-position: 50% 65%;
+    }
+    &.hero_zanzibar {
+      background-image: url(/images/home_heros/the_palms_zanzibar.jpg);
+      background-position: 50% 65%;
+    }
+    &.hero_desroches {
+      background-image: url(/images/home_heros/desroches_island.jpg);
+      background-position: 50% 10%;
+    }
+    &.hero_evian {
+      background-image: url(/images/home_heros/hotel_royal_evian.jpg);
+      background-position: 50% 80%;
     }
   }
 }

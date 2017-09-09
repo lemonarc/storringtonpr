@@ -1,6 +1,16 @@
 # Storrington PR Website
 Source files for Storrington PR Website. Website built with Nanoc 4 and Sass. Gruntfile included for Grunt workflow.
 
+## First:
+
+`gem install json`
+
+`gem install nanoc`
+
+`npm install -g grunt-cli`
+
+`npm install`
+
 ## Installing Nanoc
 Nanoc can be installed through RubyGems, so ensure Ruby 2.1 and above is installed and run the following:
 

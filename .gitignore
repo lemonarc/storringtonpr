@@ -3,3 +3,4 @@ www/output
 www/tmp
 www/crash.log
 www/content/stylesheets/stylesheet.css
+www/content/js/**

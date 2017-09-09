@@ -1,12 +1,16 @@
 {
-  "name": "wellington-house",
+  "name": "storringtonpr",
   "version": "0.1.0",
-  "description": "Wellington House new website.",
+  "description": "Storrington PR website.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/leonaves/wellington-house"
+    "url": "https://github.com/leonaves/storringtonpr"
   },
   "dependencies": {
+    "flickity": "^2.0.9"
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "^3.5.1",
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.0",
     "grunt-browser-sync": "^2.0.0",
@@ -14,6 +18,8 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-sass": "^2.0.0",
     "grunt-shell": "^1.1.2",
-    "load-grunt-tasks": "^3.1.0"
+    "grunt-webpack": "^3.0.2",
+    "load-grunt-tasks": "^3.1.0",
+    "webpack": "^3.5.5"
   }
 }
