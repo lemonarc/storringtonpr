@@ -1,11 +1,11 @@
-.our-approach-main {
+.our-team-main {
   @include outer-container();
   @include pad(0 20px);
   position: relative;
   font-size: 1.2em;
 }
 
-.team_box {
+.team_box, .partner_box {
   clear: both;
   margin-bottom: 3rem;
 
@@ -31,7 +31,13 @@
     margin: 0 20px 10px 0;
   }
 
-  &:nth-of-type(2n) {
+  .partner_image {
+    float: right;
+    max-width: 400px;
+    max-height: 100px;
+  }
+
+  &.team_box:nth-of-type(2n) {
     text-align: right;
 
     .team_image {
