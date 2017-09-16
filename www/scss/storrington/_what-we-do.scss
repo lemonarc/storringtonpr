@@ -1,0 +1,35 @@
+.what-we-do-container {
+  @include outer-container();
+  @include pad(0 20px);
+  position: relative;
+  font-size: 1.2em;
+
+  ul {
+    margin: 2em;
+    list-style: none;
+    text-align: center;
+    column-count: 2;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.5em;
+      margin-top: 0.5em;
+    }
+
+    @include media($mobile) {
+      column-count: 1;
+    }
+  }
+}
+
+.what-we-do-image {
+  width: 80%;
+  margin: auto;
+  display: block;
+
+  @include media($mobile) {
+    width: 100%;
+  }
+}
