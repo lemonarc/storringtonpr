@@ -1,4 +1,4 @@
-const Flickity = require('flickity');
+const Flickity = require('flickity-bg-lazyload');
 
 const carousel = document.querySelector('.hero_splash');
 
@@ -8,9 +8,10 @@ if (carousel) {
     wrapAround: true,
     draggable: true,
     setGallerySize: false,
-    autoPlay: 4000,
+    autoPlay: 7000,
     selectedAttraction: 0.05,
-    friction: 0.5
+    friction: 0.5,
+    bgLazyLoad: 1
   });
 
   flickCarousel.on('scroll', function(event, progress) {
