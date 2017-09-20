@@ -18,8 +18,10 @@ if (carousel) {
     flickCarousel.slides.forEach(function(slide, i) {
       slide.cells.forEach(function(cell) {
         const heroInformation = cell.element.querySelector('.hero_information');
-        const transform = ((progress - slide.x) / 2) * -1;
-        heroInformation.style.transform = 'translateX(' + transform.toString() + 'px)';
+        if (heroInformation) {
+          const transform = ((progress - slide.x) / 2) * -1;
+          heroInformation.style.transform = 'translateX(' + transform.toString() + 'px)';
+        }
       });
     });
   });

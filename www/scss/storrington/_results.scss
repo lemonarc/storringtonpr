@@ -1,0 +1,43 @@
+.results-container {
+  @include outer-container();
+  @include pad(0 20px);
+  float: none;
+  position: relative;
+  font-size: 1.2em;
+
+  @include media($mobile) {
+    font-size: 1em;
+  }
+
+  .coverage-container {
+    @include shift(1);
+    @include span-columns(10);
+    float: none;
+    border: 1px solid $brand-primary;
+    border-image: linear-gradient(to bottom, $brand-primary, transparent) 1 100%;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 100px;
+
+    @include media($mobile) {
+      @include outer-container();
+      border: none;
+      padding: 10px;
+    }
+  }
+
+  .press_logo {
+    display: block;
+    margin: 0 auto 40px;
+    max-width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  cite {
+    display: block;
+    text-align: right;
+  }
+}
