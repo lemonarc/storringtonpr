@@ -37,6 +37,7 @@
 
       &.dolphin_bay {
         background-image: url(/images/home_heros/dolphin_bay.jpg);
+        background-position: 90%;
       }
 
       &.eden_bleu {
@@ -45,14 +46,21 @@
 
       &.the_palms_zanzibar {
         background-image: url(/images/home_heros/the_palms_zanzibar.jpg);
+        background-position: 90%;
       }
 
       &.the_yorke_arms {
         background-image: url(/images/client_heros/yorke_arms_exterior.jpg);
       }
 
+      &.frangipani {
+        background-image: url(/images/client_heros/frangipani.jpg);
+        background-position: 40%;
+      }
+
       &.baraza_resort {
         background-image: url(/images/home_heros/baraza_resort.jpg);
+        background-position: 50%;
       }
 
       &.tongsai_bay {
@@ -61,14 +69,17 @@
 
       &.zanzibar_collection {
         background-image: url(/images/home_heros/zanzibar_collection.jpg);
+        background-position: 90%;
       }
 
       &.breezes_zanzibar {
         background-image: url(/images/home_heros/breezes_beach_club_spa_zanzibar.jpg);
+        background-position: bottom;
       }
 
       &.zawadi_zanzibar {
         background-image: url(/images/home_heros/zawadi_hotel.jpg);
+        background-position: bottom;
       }
 
       &.alphonse_island {
@@ -77,6 +88,7 @@
 
       &.residence_on_the_rocks {
         background-image: url(/images/home_heros/residence_on_the_rocks.jpg);
+        background-position: 90%;
 
         & + img {
           width: 15%;
