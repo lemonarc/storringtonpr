@@ -36,7 +36,7 @@ module.exports = function (grunt) {
         stderr: false
       },
       target: {
-        command: 'cd www && nanoc'
+        command: 'cd www && bundle exec nanoc'
       }
     },
     sass: {

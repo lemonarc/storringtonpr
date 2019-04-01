@@ -12,15 +12,15 @@
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.5.1",
-    "grunt": "^1.0.1",
+    "grunt": "^1.0.4",
     "grunt-autoprefixer": "^3.0.0",
     "grunt-browser-sync": "^2.0.0",
     "grunt-concurrent": "^1.0.0",
-    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^2.0.0",
     "grunt-shell": "^1.1.2",
     "grunt-webpack": "^3.0.2",
     "load-grunt-tasks": "^3.1.0",
-    "webpack": "^3.5.5"
+    "webpack": "^4.29.6"
   }
 }

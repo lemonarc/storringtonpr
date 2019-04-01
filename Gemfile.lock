@@ -1,0 +1,41 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.6.0)
+      public_suffix (>= 2.0.2, < 4.0)
+    colored (1.2)
+    concurrent-ruby (1.1.5)
+    cri (2.15.3)
+      colored (~> 1.2)
+    ddmemoize (1.0.0)
+      ddmetrics (~> 1.0)
+      ref (~> 2.0)
+    ddmetrics (1.0.1)
+    ddplugin (1.0.2)
+    hamster (3.0.0)
+      concurrent-ruby (~> 1.0)
+    nanoc (4.9.6)
+      addressable (~> 2.5)
+      cri (~> 2.15)
+      ddmemoize (~> 1.0)
+      ddmetrics (~> 1.0)
+      ddplugin (~> 1.0)
+      hamster (~> 3.0)
+      parallel (~> 1.12)
+      ref (~> 2.0)
+      slow_enumerator_tools (~> 1.0)
+      tomlrb (~> 1.2)
+    parallel (1.16.2)
+    public_suffix (3.0.3)
+    ref (2.0.0)
+    slow_enumerator_tools (1.1.0)
+    tomlrb (1.2.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  nanoc (~> 4.9)
+
+BUNDLED WITH
+   1.16.3

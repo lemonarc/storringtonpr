@@ -1,30 +1,41 @@
 # Storrington PR Website
-Source files for Storrington PR Website. Website built with Nanoc 4 and Sass. Gruntfile included for Grunt workflow.
+Source files for Storrington PR Website. Website built with Nanoc and Sass.
 
-## First:
+Gruntfile included for Grunt workflow.
 
-`gem install json`
+## Requirements
 
-`gem install nanoc`
+- Node (and therefore NPM) (https://nodejs.org/en/)
+- Ruby and Ruby Gems (https://www.ruby-lang.org/en/documentation/installation/)
+    - Note, Ruby 1.9 comes with Ruby Gems built in so should be one step
+- Bundler (https://bundler.io/)
+    - `gem install bundler` should do it
 
-`npm install -g grunt-cli`
+## Setup:
 
-`npm install`
-
-## Installing Nanoc
-Nanoc can be installed through RubyGems, so ensure Ruby 2.1 and above is installed and run the following:
-
-`gem install nanoc`
-
-When you run `nanoc` within the www directory, Nanoc will automatically compile the site from files in the 'content' folder and output to the 'output' directory. You'll notice there is only one stylesheet file, this is precompiled from the scss files in the 'scss' folder. I would reccommend working with these scss files as they are more organised.
+```bash
+npm install && bundle install
+```
 
 ## Sass
 The site uses the Neat framework (http://neat.bourbon.io/) which is a Sass framework. No special tools are needed to work with this framework, the files simply compile with Sass, but it might be worth checking the documentation if you are going to change the scss files.
 
-## Grunt
-I use a Grunt-based local development environment. You can work on the site without using Grunt, but a Grunfile and package.json is included for your convenience if you choose to use it. The workflow will watch the relevant directories for changes and automatically compile the Sass files and then run Nanoc. It will also spin up a local browsersync server and open a new browser window for you when run.
+## Development
+```bash
+npx grunt
+```
+This will open a new browser, change source files in `www` and changes will be auto-built and auto-refreshed.
+Don't modify `stylesheet.css`, instead modify files in `scss` while grunt is running and let it update the stylesheet for you.
 
-### Installing Grunt
-Grunt is installed through NodeJS so install that (http://nodejs.org) and then run `npm install -g grunt-cli`. This will install the grunt client globally on your machine. After that, simply run `npm install` in the root directory of this repository and Node will read the package.json and install all the relevant Grunt plugins. Once grunt is set up you can simply run `grunt` from the root directory of the repo and Grunt should do the rest.
+## Deployment
+The built site will end up in www/output, deploy that folder however you choose.
+
+I'm currently using:
+
+```bash
+rsync -r www/output/ leon@webserver.coredatasystems.co.uk:/var/www/storringtonpr/public_html
+```
+
+(This is mainly here for my own reference I don't expect you to be able to login as me to that server.)
 
 If you have any questions about this repository I am contactable at me@leonaves.com.

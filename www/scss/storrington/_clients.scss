@@ -1,6 +1,11 @@
 .clients_container {
   @include outer-container(95%);
 
+  h2 {
+    clear: both;
+    text-align: center;
+  }
+
   a {
     display: block;
     border: 1px solid lighten($brand-primary, 45%);
@@ -35,9 +40,8 @@
       vertical-align: middle;
       background-size: cover;
 
-      &.dolphin_bay {
-        background-image: url(/images/home_heros/dolphin_bay.jpg);
-        background-position: 90%;
+      &.blue_safari {
+        background-image: url(/images/client_heros/blue-safari.jpg);
       }
 
       &.eden_bleu {
@@ -49,13 +53,24 @@
         background-position: 90%;
       }
 
-      &.the_yorke_arms {
-        background-image: url(/images/client_heros/yorke_arms_exterior.jpg);
+      &.dunes {
+        background-image: url(/images/client_heros/dunes_hero.jpg);
+        background-position: 95%;
+
+        & + img {
+          width: auto;
+          height: 80%;
+        }
       }
 
-      &.frangipani {
-        background-image: url(/images/client_heros/frangipani.jpg);
-        background-position: 40%;
+      &.sahab {
+        background-image: url(/images/client_heros/sahab_hero.jpg);
+        background-position: 50%;
+      }
+
+      &.alabriga {
+        background-image: url(/images/client_heros/alabriga_hero.jpg);
+        background-position: 50%;
       }
 
       &.baraza_resort {
@@ -86,17 +101,26 @@
         background-image: url(/images/client_heros/alphonse-flats.jpg);
       }
 
-      &.residence_on_the_rocks {
-        background-image: url(/images/home_heros/residence_on_the_rocks.jpg);
-        background-position: 90%;
-
-        & + img {
-          width: 15%;
-        }
+      &.francos {
+        background-image: url(/images/client_heros/francos.jpg);
+        background-position: 50% 25%;
       }
 
       &.wa_ale {
         background-image: url(/images/client_heros/wa_ale.jpg);
+      }
+
+      &.al_nahda {
+        background-image: url(/images/client_heros/al-nahda-hero.jpg);
+        background-position: bottom;
+      }
+
+      &.cosmoledo {
+        background-image: url(/images/client_heros/cosmoledo-hero.jpg);
+      }
+
+      &.astove {
+        background-image: url(/images/client_heros/astove-hero.jpg);
       }
 
       &.white_swan {
