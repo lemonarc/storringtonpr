@@ -1,7 +1,7 @@
 .hero_splash {
   width: 100vw;
   max-width: $max-width;
-  height: calc(100vh - (#{$navigation-height} * 2));
+  height: 50vh;
   max-height: 50vw;
   margin: 0 auto;
   position: relative;
@@ -76,9 +76,6 @@
     background-position: 50% 50%;
 
     &.hero_alphonse {
-    }
-    &.hero_dolphin {
-      background-position: 50% 65%;
     }
     &.hero_eden {
       background-position: 50% 25%;
