@@ -6,11 +6,26 @@
   h3 {
     font-size: 1.5rem;
     font-weight: bold;
+
+    @include media($larger-than-mobile) {
+      float: left;
+      width: 20%;
+      text-align: right;
+      padding-right: 1em;
+    }
   }
 }
 
 .clients_container--client {
   @include row();
+
+  @include media($larger-than-mobile) {
+    float: left;
+    width: 80%;
+    border-bottom: 1px solid $brand-primary;
+    padding-bottom: 2em;
+    margin-bottom: 4em;
+  }
 }
 
 .client--property {
