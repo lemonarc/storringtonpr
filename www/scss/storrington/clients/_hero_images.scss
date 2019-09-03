@@ -1,0 +1,156 @@
+.hero_splash {
+  width: 100vw;
+  max-width: $max-width;
+  height: calc(100vh - (#{$navigation-height} * 2));
+  max-height: 50vw;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  outline: 0;
+
+  .flickity-viewport,
+  .flickity-slider,
+  .hero_slide,
+  .hero_image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .hero_slide {
+    position: relative;
+    -webkit-user-drag: none;
+  }
+
+  .hero_information_container {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .hero_information {
+    color: white;
+    margin: 0;
+    padding: 8px 3vw 2vw 3vw;
+    text-shadow: 0 0 7px #000;
+    text-align: left;
+
+    blockquote, cite {
+      transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+      -webkit-font-smoothing: subpixel-antialiased;
+      display: block;
+      margin: 0;
+    }
+
+    blockquote {
+      z-index: 1;
+      font-size: 1.5rem;
+      line-height: 2rem;
+
+      @include media($mobile) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+      @include media ($smaller-mobile) {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+      }
+    }
+
+    cite {
+      margin-top: 0.5em;
+      font-size: 1em;
+      text-align: right;
+
+      @include media ($smaller-mobile) {
+        font-size: 0.7em;
+      }
+    }
+  }
+
+  //noinspection CssOptimizeSimilarProperties
+  .hero_image {
+    background-size: cover;
+    background-position: 50% 50%;
+
+    &.hero_alphonse {
+    }
+    &.hero_dolphin {
+      background-position: 50% 65%;
+    }
+    &.hero_eden {
+      background-position: 50% 25%;
+    }
+    &.hero_tongsai {
+      background-position: 50% 25%;
+    }
+    &.hero_zawadi {
+      background-position: 50% 65%;
+    }
+    &.hero_zanzibar {
+      background-position: 50% 65%;
+    }
+    &.hero_desroches {
+      background-position: 50% 10%;
+    }
+    &.hero_evian {
+      background-position: 50% 80%;
+    }
+  }
+}
+
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 35px;
+  padding: 5px 8px;
+
+  @include media($mobile) {
+    height: 25px;
+    top: 40%;
+    padding: 5px 11px;
+  }
+
+  svg {
+    height: 100%;
+    fill: white;
+  }
+
+  &.previous {
+    left: 3%;
+  }
+
+  &.next {
+    right: 3%;
+  }
+}
+
+.splash_divider {
+  height: $navigation-height;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+
+  p {
+    margin: 1.1rem 0 0;
+    line-height: 2.4rem;
+  }
+
+  img {
+    height: 1.5rem;
+  }
+
+  @include transition(opacity 0.5s);
+
+  &.hidden {
+    opacity: 0;
+    cursor: inherit;
+  }
+
+  @include media($max-width) {
+    display: none;
+  }
+}

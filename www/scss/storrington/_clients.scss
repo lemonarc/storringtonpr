@@ -1,5 +1,9 @@
+@import 'clients/hero_images';
+
 .clients_container {
   @include outer-container(95%);
+  // Setting max width to match hero slider
+  max-width: 75rem;
 
   margin-bottom: 5rem;
 
