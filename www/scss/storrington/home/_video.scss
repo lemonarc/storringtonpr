@@ -3,6 +3,8 @@
   border-left: none;
   position: relative;
   margin-bottom: 4em;
+  max-height: 400px;
+  overflow: hidden;
 }
 
 .no-video .video-container video,
@@ -16,11 +18,10 @@
 }
 
 .video-container {
-  position: relative;
-  bottom: 0%;
-  left: 0%;
-  height: 100%;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  padding-top: 47%; /* 1:1 Aspect Ratio */
   overflow: hidden;
   background: #000;
 }
@@ -30,6 +31,7 @@
   bottom: 0;
   position: absolute;
   z-index: 50;
+  height: 100% !important;
 }
 
 .video-container .filter {
@@ -44,7 +46,10 @@
 .video-container video {
   position: absolute;
   z-index: 90;
-  bottom: 0;
+  bottom: -15%;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
 }
 
 .video-container video.fillWidth {

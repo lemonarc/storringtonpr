@@ -1,8 +1,8 @@
 nav {
   position: fixed;
-  z-index: 20;
+  z-index: 1000;
   background-color: rgba(255, 255, 255, 0.8);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   border-bottom: 1px solid #fff;
   @include transition(background-color 0.25s, border-bottom-color 0.25s, height 0.5s);
   overflow: hidden;
@@ -21,10 +21,9 @@ nav {
 
   padding: 1rem 0;
 
-  $navigation_inner_height: 70px;
-  
+  $navigation_inner_height: 40px;
+
   .navigation_inner {
-    @include outer-container();
     height: $navigation_inner_height;
   }
 
@@ -35,10 +34,9 @@ nav {
     line-height: $navigation_inner_height;
 
     img {
-      max-height: 60px;
+      max-height: 45px;
       max-width: 100%;
       position: relative;
-      top: 3px;
       vertical-align: middle;
     }
   }
@@ -46,7 +44,7 @@ nav {
   .navigation_hamburger {
       display: none;
       position: relative;
-      top: 25px;
+      top: 10px;
 
       &:hover {
         cursor: pointer;
@@ -117,6 +115,7 @@ nav {
       @include fill-parent();
       font-size: 2rem;
       text-align: left;
+      margin: 1rem 0;
 
       a {
         width: 100%;
