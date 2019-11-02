@@ -1,5 +1,5 @@
 # Storrington PR Website
-Source files for Storrington PR Website. Website built with Nanoc and Sass.
+Source files for Storrington PR Website. Website built with [Nanoc](https://nanoc.ws/) and [Sass](https://sass-lang.com/).
 
 Gruntfile included for Grunt workflow.
 
